@@ -1,0 +1,25 @@
+{
+  "video_id": "5v-IpzBxzFs",
+  "title": "降低 57% Token 消耗！CodeGraph如何用本地图谱重塑 AI 编程",
+  "youtube_url": "https://www.youtube.com/watch?v=5v-IpzBxzFs",
+  "duration": "9分35秒",
+  "summary": "CodeGraph是专门为AI代理打造的本地代码知识图谱——通过预先索引代码符号、调用关系和框架路由，在官方基准中将AI代码库搜索成本降低57%。不是简单的grep替代品，而是给AI提供了一个「代码库的鸟瞰地图」——让AI不必每次搜索文件就能知道要找的东西在什么地方。和Codebase-Memory-MCP（另一个知识图谱方案）的不同路线：CodeGraph更轻量、更偏向符号级索引而非深度语义理解。",
+  "key_points": [
+    "CodeGraph核心：预先构建代码符号-调用关系-框架路由的三层索引→AI查询时有鸟瞰地图→减少盲目搜索→降Token 57%",
+    "与grep/AI内置搜索的本质区别：grep是关键词匹配无上下文，CodeGraph是关系图谱+上下文定位→指向「要找的东西」而非「相关的东西」",
+    "本地运行的隐私优势：索引完全本地构建→代码不需要上传到云端→不受出口管制/隐私风险影响",
+    "与Codebase-Memory-MCP对比：Knowledge Graph路线vs符号级索引路线→CodeGraph更轻量但语义理解较不如MCP方案",
+    "Token优化的路径分化：纯压缩(Superpowers)、视觉套利(pxpipe)、知识图谱(Codebase-Memory-MCP)、符号索引(CodeGraph)、上下文过滤(Headroom)"
+  ],
+  "categories": ["AI编程工具与框架"],
+  "tags": ["CodeGraph", "Token优化", "知识图谱", "代码索引", "本地运行", "符号级", "上下文优化"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "CodeGraph开源项目", "url": "https://github.com/codegraph", "description": "AI代理本地代码知识图谱"}
+    ],
+    "technical_details": "三层索引：①符号层(namespace→class→function→variable) ②调用关系层(who calls what→data flow→dependency) ③框架路由层(Next.js pages/ Django urls/ Spring controllers)。查询流程：AI想修改X→先在符号层找到X位置→通过调用关系层找到受影响的Y/Z→精准读取需要的文件→而不需要搜索整个代码库。57%节省=AI不再盲目遍历文件→只读「图谱指向的」文件。",
+    "related_work": "与Headroom(92%节省)的区别：Headroom压缩的是「已读取的内容」，CodeGraph减少的是「需要读取的内容」→两者互补。Superpowers v6(60%)压缩上下文→三方案可组合使用→Token优化效果叠加。"
+  },
+  "resources": [],
+  "takeaways": "CodeGraph揭示了Token优化的另一个维度：不是压缩内容，而是精准定位→减少不必要的读取。AI编程的Token消耗大头不在于「写代码」而在于「找代码」和「理解代码」→知识图谱方案在这两个环节的节省潜力远超压缩方案。如果你用AI编程且项目大于1万行→代码图谱是必需品不是可选项。"
+}

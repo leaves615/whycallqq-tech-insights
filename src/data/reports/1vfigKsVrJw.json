@@ -1,0 +1,27 @@
+{
+  "video_id": "1vfigKsVrJw",
+  "title": "为什么Agent越多，工程师越累？正确认识编排税和动态工作流",
+  "youtube_url": "https://www.youtube.com/watch?v=1vfigKsVrJw",
+  "duration": "16分59秒",
+  "summary": "Addy Osmani提出「编排税」（Orchestration Tax）警告：启动Agent很容易，但审查和协调它们的成本被严重低估。人类认知能力是AI时代最大的系统瓶颈。但Anthropic同时发布了动态工作流——Bun作者在11天内用Claude Opus 4.8生成75万行Rust代码测试通过率99.8%。矛盾？不矛盾：编排税是对「盲目堆Agent」的警告，动态工作流是「智能编排」的解药——关键是减少人类的协调成本。",
+  "key_points": [
+    "编排税定义：每多一个Agent→就多一份需要人类审查的输出→人类的注意力是有限资源→超过2-4个Agent后边际收益为负",
+    "GPT-5.6多Agent数据验证了编排税：4→16 Agent成本×2.5性能仅+1.11pp——审查Agent输出的人的成本没算进去",
+    "动态工作流是编排税的解药：不是预先分配任务给固定Agent→而是任务动态分解→Agent按能力匹配→降低人类审查面",
+    "Bun案例的核心不是75万行代码→而是「测试通过率99.8%消除了人类审查成本」->编排税降到接近零",
+    "设计师是未来的工程师角色核心——不是写代码的，而是设计「怎么让Agent自动验证自己」的"
+  ],
+  "categories": ["Agent与多Agent架构", "AI编程工具与框架"],
+  "tags": ["编排税", "Addy Osmani", "动态工作流", "Claude Opus 4.8", "Bun", "多Agent", "人类瓶颈"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Addy Osmani编排税文章", "url": "https://addyosmani.com/blog/orchestration-tax/", "description": "Google Cloud工程师对多Agent审查成本的深度分析"}
+    ],
+    "technical_details": "编排税经济学：设人类审查能力=每天N个Agent输出。启动M个Agent(M>N)→未审查的输出堆积→质量下降→技术债积累。最优Agent数=kM 其中k=自动化验证覆盖率。如果验证覆盖率=0%(全部人工审查)→最优M≈2-4。如果验证覆盖率=99.8%(Bun案例)→M可以很大。编排税的解=提高自动化验证覆盖率而非减少Agent。动态工作流降低编排税的方式：任务分解→每个子任务有独立验证标准→Agent自己检查→只把「验证失败」的交给人类。",
+    "related_work": "与GPT-5.6多Agent数据呼应：边际效益递减验证了编排税。与Claude Code Loop Engineering的关联：验证机制(Verifier)就是对抗编排税的核心武器。与Cursor P99报告(46倍代码行)的关联：P99的人大概率把验证自动化了→编排税低→能管理更多Agent。"
+  },
+  "resources": [
+    {"title": "Addy Osmani编排税文章", "url": "https://addyosmani.com/blog/orchestration-tax/", "type": "article"}
+  ],
+  "takeaways": "编排税是AI时代最重要的工程经济学概念：不是「AI越多越好」→而是「AI的验证覆盖率越高，能有效运行的AI才越多」。你的产出上限不是AI数量上限，是你的自动验证覆盖率上限。Bun的99.8%测试通过率意味着人类不需要审查→编排税为零→AI可无限扩展。目标：把编排税迭代到零→让AI自动验证AI→你只审查「AI验证失败」的那些。"
+}
