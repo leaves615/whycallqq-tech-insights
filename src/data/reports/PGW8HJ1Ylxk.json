@@ -1,0 +1,25 @@
+{
+  "video_id": "PGW8HJ1Ylxk",
+  "title": "连诺贝尔奖得主都说 AI 缺少这三块拼图——拆解 Demis Hassabis 的 AGI 路线",
+  "youtube_url": "https://www.youtube.com/watch?v=PGW8HJ1Ylxk",
+  "duration": "12分42秒",
+  "summary": "诺贝尔化学奖得主、Google DeepMind CEO Demis Hassabis在YC访谈中给出AGI缺失的三块拼图：持续学习（continual learning——不能学新忘旧）、长期推理（long-horizon reasoning——百万上下文不是真记忆而是高昂检索成本）、结构化记忆（structured memory——现在的Agent记忆只是事实堆砌，没有形成可重建的生命周期）。AlphaGo强化学习的回归正在重塑技术栈——RL成为通往这三块拼图的关键。小模型的逆袭是必然的。",
+  "key_points": [
+    "AGI缺失的三块拼图：①持续学习(现在模型学到新东西会忘旧东西→灾难性遗忘) ②长期推理(百万上下文只能让你回顾历史但不能做真正的长期规划→回顾≠规划) ③结构化记忆(记忆需要形成巩固→重建→筛选的完整生命周期→现在只是一个巨大的检索索引)",
+    "百万上下文不是真记忆=反向损害：让AI通过反复检索来找信息→检索成本高昂→准确性下降→LLM需要结构化内部记忆而非更长外部上下文",
+    "AlphaGo RL的回归：RL不是被RLHF替代→RL是针对「长远目标→自我探索→结构化经验」的唯一方法→让AI真正学会策略而非对话",
+    "小模型逆袭的必然性：大模型解决的是「广」→小模型解决的是「深」→当RL实现持续学习和结构化记忆→小模型在特定领域可以击败大模型（因为小模型不会被无关知识干扰）",
+    "结论：不是造更大的模型→而是给现有模型加上持续学习和结构化记忆→这是从AGI到ASI的区别所在"
+  ],
+  "categories": ["AI行业战略与趋势", "Agent与多Agent架构"],
+  "tags": ["Demis Hassabis", "AGI", "持续学习", "长期推理", "结构化记忆", "RL回归", "小模型逆袭"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Demis Hassabis YC访谈", "url": "https://www.ycombinator.com/blog/demis-hassabis", "description": "诺贝尔奖得主+Google DeepMind CEO的深度AI访谈"}
+    ],
+    "technical_details": "三块拼图的技术解读：①持续学习=新知识不覆盖旧知识→类似隔离网络或代码迭代(启发式学习)方案。②长期推理=不仅仅回顾过去的token→能从过去经验中形成「计划→行动→结果→修正」的循环→当前LLM的推理是单步的→AlphaGo用MCTS实现了多步→这个框架需要被嫁接到语言模型。③结构化记忆=记忆应该经历(编码→巩固→回忆→时效判断)→类似EverMemOS→现在的向量检索是面向信息回忆→不是面向知识推理。",
+    "related_work": "与DeepMind ASI论文的关联：Demis的「三块拼图」和DeepMind论文的「4条ASI路线+6堵高墙」——两条线索都指向同一个结论：AGI不会自然地从更大模型中出现，而需要额外的架构创新。与启发式学习/持续学习进展的关联：翁家翌的启发式学习触达了「持续学习」的一种解法。"
+  },
+  "resources": [],
+  "takeaways": "Demis的核心信号：不要再追求更大的模型（那是扩展Scaling Law的路线），要给现有模型加上三大拼图：持续学习(学新不忘旧)+长期推理(不只看过去而能计划未来)+结构化记忆(不只是检索而能推理)。这三样东西加上去→人类水平的理解、然后ASI才有可能。这是对10万亿参数竞赛的降温和方向修正。"
+}
