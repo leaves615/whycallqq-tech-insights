@@ -1,0 +1,23 @@
+{
+  "video_id": "ESE-oSgaaRY",
+  "title": "花了钱，买了个偏科天才：LLM 推理成本与锯齿状智能的底层逻辑",
+  "youtube_url": "https://www.youtube.com/watch?v=ESE-oSgaaRY",
+  "duration": "10分38秒",
+  "summary": "你以为你在为AI的「智力」买单，其实是在为它的「记性」交税。输入输出价格差几倍的根本原因是KV Cache的物理本质：输入是并行处理（一次过），输出是串行生成（每次需访问整个历史的KV Cache）。从软件(vLLM PagedAttention、DeepSeek MLA、Google TurboQuant)到硬件(Cerebras WSE-3的21PB/s片上SRAM=GPU 7000倍带宽)的完整优化链揭示了一个核心矛盾：AI推理成本的物理基础决定了锯齿状智能的经济学。",
+  "key_points": [
+    "KV Cache=AI的「记性」成本：每生成一个Token需要存取整个上下文的键值对→输出Token越往后越贵→这就是输入输出价格差的物理原因",
+    "软件层KV优化三梯队：vLLM PagedAttention(显存管理)→DeepSeek MLA(注意力压缩)→Google TurboQuant(量化KV)",
+    "Cerebras WSE-3：晶圆级芯片→21PB/s片上SRAM(7000倍GPU内存带宽)→百万Token KV无需HBM溢出→物理极限打破",
+    "锯齿状智能的经济学解释：当你为一个模型付费→你付的是「记性成本」不是「智力成本」→记性好但推理弱=浪费钱→记性差但推理强=性价比高",
+    "三层优化方案：软件层(日常部署)→硬件层(大规模推理)→算法层(模型架构减少对记性的依赖)"
+  ],
+  "categories": ["AI模型深度评测", "论文与技术深度拆解"],
+  "tags": ["KV Cache", "推理成本", "LLM", "vLLM", "MLA", "Cerebras", "锯齿状智能", "PagedAttention"],
+  "deep_research": {
+    "original_sources": [],
+    "technical_details": "KV Cache本质：Transformer自注意力的副产品→每层每个token的Key和Value向量需要存下来→一个10K上下文的生成涉及10K^2次KV Cache访问。软硬件优化链：vLLM用操作系统式内存管理(类似虚拟内存的页管理)减少碎片→MLA用低秩分解压缩每个KV向量→TurboQuant用低精度量化减少KV字节大小。Cerebras方案：不用HBM→全片上SRAM→KV直接片上→延时几乎为零。物理经济学：记性成本(内存访问)>>智力成本(矩阵运算)→优化记性比优化智力更划算。",
+    "related_work": "与Reiner Pope(TPU架构师)的Token定价物理极限呼应——这是从同一问题的不同角度。与DSpark投机解码的关联：投机解码本质上是在KV不变的情况下「猜输出」→减少KV存取次数→降成本。与pxpipe的关联：pxpipe利用视觉通道的低「记性成本」替代文本通道的高「记性成本」→套利。"
+  },
+  "resources": [],
+  "takeaways": "Token定价的秘密=「记性成本模型」。理解了KV Cache的物理，你就知道为什么「Claude比Kimi便宜但一个Token包含不同的智力/记性组合」→不是所有Token都等价。选择AI模型=选择智力和记性的不同分配比例——这才是真正的性价比考量。"
+}
