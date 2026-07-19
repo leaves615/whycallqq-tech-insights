@@ -1,0 +1,78 @@
+{
+  "video_id": "7pSZx9-VT3k",
+  "title": "Token消耗减少120倍？Codebase-Memory-MCP的性能突破原理解析",
+  "youtube_url": "https://www.youtube.com/watch?v=7pSZx9-VT3k",
+  "duration": "",
+  "summary": "Codebase-Memory-MCP的技术架构分析——如何实现Linux内核级代码库3分钟索引和99%Token降幅",
+  "key_points": [
+    "Codebase-Memory-MCP由DeusData开发，能将Linux内核（2800万行代码、7.5万文件）在约3分钟完成全索引，语义查询响应<1ms",
+    "核心技术创新：单二进制静态编译（C语言实现，零依赖）+ 158种语言的tree-sitter AST解析 + Hybrid LSP语义类型解析（12种主要语言）+ SQLite持久化知识图谱",
+    "Token效率数据：在5题推理测试中，从412,000 tokens降至3,400 tokens（减少99%/约120倍）；多token评估31个仓库显示83%答案质量+10x更少tokens+2.1x更少tool calls"
+  ],
+  "categories": [
+    "AI编程工具与框架",
+    "论文与技术深度拆解"
+  ],
+  "tags": [
+    "Codebase-Memory-MCP",
+    "Token优化",
+    "知识图谱",
+    "Tree-sitter",
+    "MCP",
+    "代码检索"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "codebase-memory-mcp",
+        "url": "https://github.com/DeusData/codebase-memory-mcp",
+        "description": ""
+      },
+      {
+        "name": "codebase-memory-mcp-knowledge-graph-99-fewer-tokens",
+        "url": "https://toknow.ai/posts/codebase-memory-mcp-knowledge-graph-99-fewer-tokens",
+        "description": ""
+      },
+      {
+        "name": "2603.27277",
+        "url": "https://arxiv.org/abs/2603.27277",
+        "description": ""
+      },
+      {
+        "name": "watch?v=YEvdQVl_QUk",
+        "url": "https://www.youtube.com/watch?v=YEvdQVl_QUk",
+        "description": ""
+      }
+    ],
+    "technical_details": "**索引流水线：** 多轮pass：结构发现 → 定义解析 → 调用链构建 → HTTP链接 → 配置关联 → 测试关联\n**存储层：** SQLite图存储（节点+边+遍历+搜索+Louvain社区发现），支持Cypher图查询语言\n**语义解析：** Tree-sitter为基础AST提取 + Hybrid LSP增强（Python, TS/JS, PHP, C#, Go, C, C++, Java, Kotlin, Rust, Perl）\n**MCP工具集：** 15个MCP工具可通过MCP协议供Claude Code/Codex CLI/Cursor/Aider等直接调用\n**自动同步：** watcher模块后台监听git变化，自适应轮询间隔更新图谱\n部署形态：单二进制（macOS/Linux/Windows），下载即用\n内存管理：自定义内存分配算法，图谱快照可共享\n查询性能：亚毫秒级查询（sub-ms queries）\n附加功能：嵌入式HTTP服务 + 3D图谱可视化接口 + 运行时trace注入 + Cypher lexer/parser/planner/executor\n• Codebase-Memory-MCP由DeusData开发，能将Linux内核（2800万行代码、7.5万文件）在约3分钟完成全索引，语义查询响应<1ms\n• 核心技术创新：单二进制静态编译（C语言实现，零依赖）+ 158种语言的tree-sitter AST解析 + Hybrid LSP语义类型解析（12种主要语言）+ SQLite持久化知识图谱\n• Token效率数据：在5题推理测试中，从412,000 tokens降至3,400 tokens（减少99%/约120倍）；多token评估31个仓库显示83%答案质量+10x更少tokens+2.1x更少tool calls",
+    "related_work": "**与CodeGraph对比：** 解决同一痛点（代码库检索的语义化），但路线不同：CodeGraph走了更工程化的路线，Codebase-Memory-MCP走了极致性能的二进制路线"
+  },
+  "resources": [
+    {
+      "title": "codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "type": "tool"
+    },
+    {
+      "title": "codebase-memory-mcp-knowledge-graph-99-fewer-tokens",
+      "url": "https://toknow.ai/posts/codebase-memory-mcp-knowledge-graph-99-fewer-tokens",
+      "type": "blog"
+    },
+    {
+      "title": "2603.27277",
+      "url": "https://arxiv.org/abs/2603.27277",
+      "type": "paper"
+    },
+    {
+      "title": "watch?v=YEvdQVl_QUk",
+      "url": "https://www.youtube.com/watch?v=YEvdQVl_QUk",
+      "type": "blog"
+    },
+    {
+      "title": "arXiv:2603.27277 — Codebase-Memory: Tree-Sitter-Based Knowledge Graphs for LLM Code Exploration via MCP",
+      "url": "",
+      "type": "paper"
+    }
+  ],
+  "takeaways": "不是一个greep替代品，而是让AI Agent先查图谱再检索的\"记忆层\"基础设施"
+}

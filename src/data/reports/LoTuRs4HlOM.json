@@ -1,0 +1,84 @@
+{
+  "video_id": "LoTuRs4HlOM",
+  "title": "Claude Sonnet 5真便宜吗？我按任务成本重新算了一遍",
+  "youtube_url": "https://www.youtube.com/watch?v=LoTuRs4HlOM",
+  "duration": "",
+  "summary": "基于Artificial Analysis实测数据和官方文档的Claude Sonnet 5真实成本结构深度拆解",
+  "key_points": [
+    "Sonnet 5于2026年6月30日发布，Anthropic声称它是\"最具代理性的Sonnet模型\"，在AI Intelligence Index得分53，比Sonnet 4.6提升6点，与GPT-5.5同级",
+    "表观定价有欺骗性：Sonnet 5与Sonnet 4.6同价（$3/$15 per 1M tokens input/output），6月30日至9月1日促销价为$2/$10。但实际Task成本比Opus 4.8还高约15%",
+    "Token消耗激增是隐藏成本：Sonnet 5每次Intelligence Index任务比Sonnet 4.6多用约40%输出tokens；在知识工作评估（AA-Briefcase, GDPval-AA）中代理turns是Sonnet 4.6的约3倍"
+  ],
+  "categories": [
+    "AI模型深度评测",
+    "AI编程工具与框架",
+    "Agent与多Agent架构",
+    "论文与技术深度拆解"
+  ],
+  "tags": [
+    "Claude Sonnet 5",
+    "成本分析",
+    "Token消耗",
+    "AI定价",
+    "Agentic AI"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "claude-sonnet-5-agentic-cost",
+        "url": "https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost",
+        "description": ""
+      },
+      {
+        "name": "claude-sonnet-5",
+        "url": "https://artificialanalysis.ai/models/claude-sonnet-5",
+        "description": ""
+      },
+      {
+        "name": "claude-sonnet-5-release-rumors-anthropic-2026",
+        "url": "https://explainx.ai/blog/claude-sonnet-5-release-rumors-anthropic-2026",
+        "description": ""
+      },
+      {
+        "name": "ai-pricing-2026-breakdown",
+        "url": "https://aiempiremedia.com/ai-pricing-2026-breakdown",
+        "description": ""
+      },
+      {
+        "name": "claude-ai-complete-guide-models-pricing-features-2026",
+        "url": "https://www.nxcode.io/resources/news/claude-ai-complete-guide-models-pricing-features-2026",
+        "description": ""
+      }
+    ],
+    "technical_details": "• Sonnet 5于2026年6月30日发布，Anthropic声称它是\"最具代理性的Sonnet模型\"，在AI Intelligence Index得分53，比Sonnet 4.6提升6点，与GPT-5.5同级\n• 表观定价有欺骗性：Sonnet 5与Sonnet 4.6同价（$3/$15 per 1M tokens input/output），6月30日至9月1日促销价为$2/$10。但实际Task成本比Opus 4.8还高约15%\n• Token消耗激增是隐藏成本：Sonnet 5每次Intelligence Index任务比Sonnet 4.6多用约40%输出tokens；在知识工作评估（AA-Briefcase, GDPval-AA）中代理turns是Sonnet 4.6的约3倍",
+    "related_work": ""
+  },
+  "resources": [
+    {
+      "title": "claude-sonnet-5-agentic-cost",
+      "url": "https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost",
+      "type": "blog"
+    },
+    {
+      "title": "claude-sonnet-5",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-5",
+      "type": "blog"
+    },
+    {
+      "title": "claude-sonnet-5-release-rumors-anthropic-2026",
+      "url": "https://explainx.ai/blog/claude-sonnet-5-release-rumors-anthropic-2026",
+      "type": "blog"
+    },
+    {
+      "title": "ai-pricing-2026-breakdown",
+      "url": "https://aiempiremedia.com/ai-pricing-2026-breakdown",
+      "type": "blog"
+    },
+    {
+      "title": "claude-ai-complete-guide-models-pricing-features-2026",
+      "url": "https://www.nxcode.io/resources/news/claude-ai-complete-guide-models-pricing-features-2026",
+      "type": "blog"
+    }
+  ],
+  "takeaways": ""
+}

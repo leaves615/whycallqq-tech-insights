@@ -1,0 +1,60 @@
+{
+  "video_id": "V0pzTr2wuCs",
+  "title": "为什么你读不懂论文？因为你用错了方法",
+  "youtube_url": "https://www.youtube.com/watch?v=V0pzTr2wuCs",
+  "duration": "",
+  "summary": "深度拆解Srinivasan Keshav经典论文《How to Read a Paper》的三遍阅读法",
+  "key_points": [
+    "《How to Read a Paper》由剑桥大学教授Srinivasan Keshav于2007年发表，已被Stanford、MIT等高校课程作为必读材料引用",
+    "核心方法：三遍阅读法——不应从头读到尾，而是分三层递进：第一遍快速建框架（5-10分钟），第二遍深入理解内容但忽略证明细节（约1小时），第三遍虚拟重构论文（数小时）"
+  ],
+  "categories": [
+    "论文与技术深度拆解"
+  ],
+  "tags": [
+    "论文阅读",
+    "三遍阅读法",
+    "S. Keshav",
+    "文献综述",
+    "学习方法"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "p83-keshavA.pdf",
+        "url": "http://ccr.sigcomm.org/online/files/p83-keshavA.pdf",
+        "description": ""
+      },
+      {
+        "name": "HowtoReadPaper.pdf",
+        "url": "https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf",
+        "description": ""
+      },
+      {
+        "name": "three-pass-research-literature-review",
+        "url": "https://richardmathewsii.substack.com/p/three-pass-research-literature-review",
+        "description": ""
+      }
+    ],
+    "technical_details": "• 《How to Read a Paper》由剑桥大学教授Srinivasan Keshav于2007年发表，已被Stanford、MIT等高校课程作为必读材料引用\n• 核心方法：三遍阅读法——不应从头读到尾，而是分三层递进：第一遍快速建框架（5-10分钟），第二遍深入理解内容但忽略证明细节（约1小时），第三遍虚拟重构论文（数小时）",
+    "related_work": ""
+  },
+  "resources": [
+    {
+      "title": "p83-keshavA.pdf",
+      "url": "http://ccr.sigcomm.org/online/files/p83-keshavA.pdf",
+      "type": "blog"
+    },
+    {
+      "title": "HowtoReadPaper.pdf",
+      "url": "https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf",
+      "type": "blog"
+    },
+    {
+      "title": "three-pass-research-literature-review",
+      "url": "https://richardmathewsii.substack.com/p/three-pass-research-literature-review",
+      "type": "blog"
+    }
+  ],
+  "takeaways": ""
+}

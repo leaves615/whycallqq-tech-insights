@@ -1,0 +1,72 @@
+{
+  "video_id": "jBz4mmjJREs",
+  "title": "揭秘金融AI的真相：不是模型大就赢，而是专家微调决定生死",
+  "youtube_url": "https://www.youtube.com/watch?v=jBz4mmjJREs",
+  "duration": "",
+  "summary": "对比Nof1 Alpha Arena AI炒币实验（通用LLM脆败）与桥水/Thinking Machines的专家微调路径（专业获胜）",
+  "key_points": [
+    "Alpha Arena Season 1（2025年10月17日-11月3日）：Nof1给6个前沿LLM（GPT-5, Gemini 2.5 Pro, Claude Sonnet 4.5, Grok 4, DeepSeek v3.1, Qwen3-Max）各$10,000，在Hyperliquid加密货币期货市场自主交易",
+    "结果惨淡：无一模型展现稳定交易优势。Qwen3-Max排名第一，DeepSeek第二，多数美国模型亏损超50%。通用大模型在真实金融市场中暴露明显脆弱性",
+    "桥水基金（Bridgewater）+ Thinking Machines（OpenAI前CTO创立）的完全不同路径：不做直接交易，而是用高质量人类专家数据微调模型，将金融专家的\"直觉\"和\"判断力\"复制到模型中"
+  ],
+  "categories": [
+    "AI模型深度评测"
+  ],
+  "tags": [
+    "金融AI",
+    "量化交易",
+    "专家微调",
+    "Alpha Arena",
+    "桥水基金",
+    "Thinking Machines"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "TechPost1",
+        "url": "https://nof1.ai/blog/TechPost1",
+        "description": ""
+      },
+      {
+        "name": "ai-models-given-10k-to-compete-in-first-of-its-kind-crypto-trading-competition-and-most-crashed-and-burned",
+        "url": "https://nypost.com/2025/11/08/business/ai-models-given-10k-to-compete-in-first-of-its-kind-crypto-trading-competition-and-most-crashed-and-burned",
+        "description": ""
+      },
+      {
+        "name": "learning-to-replicate-expert-judgment-in-financial-tasks",
+        "url": "https://thinkmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks",
+        "description": ""
+      },
+      {
+        "name": "alpha-arena-ai-trading-season-1-results",
+        "url": "https://www.iweaver.ai/blog/alpha-arena-ai-trading-season-1-results",
+        "description": ""
+      }
+    ],
+    "technical_details": "\n**通用LLM路径（Alpha Arena）：**\n  - 方法：零样本系统交易——只给数值数据和相同提示词\n  - 结果：多数失败——GPT-5, Gemini, Claude, Grok等表现不佳\n  - 根本原因：金融市场混沌特性（非线性、非平稳、高噪声）+大模型无法从纯数值时间序列数据中提取因果推理\n  - 实验设置：中长期频率交易（MLFT），PE市场永久期货，BTC/ETH/SOL/BNB/DOGE/XRP\n  - 缺陷：无历史状态访问、无制度感知、无经验学习、单次运行缺乏统计功效\n\n**专家微调路径（桥水/Thinking Machines）：**\n  - 方法：高质量人类专家标注数据微调——Teaching model to replicate expert judgment\n  - 结果：模型准确率超过本次测试的前沿基础模型\n  - 成本效益：成本降至原来的十几分之一\n  - 核心启示：\"差异化智能\"——不是模型大就赢，而是专家知识和领域专业判断力才是竞争力\n• Alpha Arena Season 1（2025年10月17日-11月3日）：Nof1给6个前沿LLM（GPT-5, Gemini 2.5 Pro, Claude Sonnet 4.5, Grok 4, DeepSeek v3.1, Qwen3-Max）各$10,000，在Hyperliquid加密货币期货市场自主交易\n• 结果惨淡：无一模型展现稳定交易优势。Qwen3-Max排名第一，DeepSeek第二，多数美国模型亏损超50%。通用大模型在真实金融市场中暴露明显脆弱性\n• 桥水基金（Bridgewater）+ Thinking Machines（OpenAI前CTO创立）的完全不同路径：不做直接交易，而是用高质量人类专家数据微调模型，将金融专家的\"直觉\"和\"判断力\"复制到模型中",
+    "related_work": ""
+  },
+  "resources": [
+    {
+      "title": "TechPost1",
+      "url": "https://nof1.ai/blog/TechPost1",
+      "type": "blog"
+    },
+    {
+      "title": "ai-models-given-10k-to-compete-in-first-of-its-kind-crypto-trading-competition-and-most-crashed-and-burned",
+      "url": "https://nypost.com/2025/11/08/business/ai-models-given-10k-to-compete-in-first-of-its-kind-crypto-trading-competition-and-most-crashed-and-burned",
+      "type": "blog"
+    },
+    {
+      "title": "learning-to-replicate-expert-judgment-in-financial-tasks",
+      "url": "https://thinkmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks",
+      "type": "blog"
+    },
+    {
+      "title": "alpha-arena-ai-trading-season-1-results",
+      "url": "https://www.iweaver.ai/blog/alpha-arena-ai-trading-season-1-results",
+      "type": "blog"
+    }
+  ],
+  "takeaways": "混沌系统的非线性+非平稳+高噪声+反身性使得大模型的统计模式匹配能力无法胜任因果推理和动态适应 未来三年AI在垂直行业的唯一正确路径是\"差异化智能\"——通用模型+领域专家数据微调 Alpha Arena全程公开（live trading with real capital），所有交易on-chain可审计，模型聊天记录公开可见"
+}

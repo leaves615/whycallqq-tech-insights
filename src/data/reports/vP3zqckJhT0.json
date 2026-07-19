@@ -1,8 +1,20 @@
 {
   "video_id": "vP3zqckJhT0",
   "title": "抛弃Superpowers？深度拆解OpenSpec：轻量级AI编程框架的逆袭",
-  "url": "https://www.youtube.com/watch?v=vP3zqckJhT0",
-  "category": "AI编程框架",
+  "youtube_url": "https://www.youtube.com/watch?v=vP3zqckJhT0",
+  "duration": "",
+  "summary": "OpenSpec（6万星）vs Superpowers（24万星）的技术路线与架构哲学深度对比",
+  "key_points": [
+    "OpenSpec的核心理念是SDD（Spec-Driven Development，规范驱动开发）：在AI编写任何代码之前，必须先和人类达成规范共识",
+    "OpenSpec相比Superpowers更加轻量、聚焦。Superpowers有九步强制的brainstorming流程，而OpenSpec强调\"先写规范，再写代码\"",
+    "OpenSpec 1.0后的重大更新包括早期beta的Stores功能和完整SDD工作流（explore→propose→implement→review→archive）",
+    "核心工作流：/opsx:explore（探索性思考）→ /opsx:propose（生成提案）→ /opsx:implement（实现）→ 多阶段审查→ /opsx:archive（归档），每个变更独立文件夹存储"
+  ],
+  "categories": [
+    "AI模型深度评测",
+    "AI编程工具与框架",
+    "论文与技术深度拆解"
+  ],
   "tags": [
     "OpenSpec",
     "Superpowers",
@@ -11,62 +23,53 @@
     "AI编程",
     "轻量级框架"
   ],
-  "core_topic": "OpenSpec（6万星）vs Superpowers（24万星）的技术路线与架构哲学深度对比",
-  "key_findings": [
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "OpenSpec",
+        "url": "https://github.com/Fission-AI/OpenSpec",
+        "description": ""
+      },
+      {
+        "name": "openspec.pro",
+        "url": "https://openspec.pro",
+        "description": ""
+      },
+      {
+        "name": "superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": ""
+      },
+      {
+        "name": "awesome-openspec",
+        "url": "https://github.com/speclib/awesome-openspec",
+        "description": ""
+      }
+    ],
+    "technical_details": "• OpenSpec的核心理念是SDD（Spec-Driven Development，规范驱动开发）：在AI编写任何代码之前，必须先和人类达成规范共识\n• OpenSpec相比Superpowers更加轻量、聚焦。Superpowers有九步强制的brainstorming流程，而OpenSpec强调\"先写规范，再写代码\"\n• OpenSpec 1.0后的重大更新包括早期beta的Stores功能和完整SDD工作流（explore→propose→implement→review→archive）\n• 核心工作流：/opsx:explore（探索性思考）→ /opsx:propose（生成提案）→ /opsx:implement（实现）→ 多阶段审查→ /opsx:archive（归档），每个变更独立文件夹存储",
+    "related_work": "**OpenSpec：** {'理念': '规范驱动开发（SDD）—先写规范再写代码', 'GitHub星标': '约6万', '定位': '轻量级、聚焦规范；specs+design+tasks三件套', '优势': '轻量快速、低学习成本、Brownfield友好、30+工具支持', '工作流': '/opsx:explore → /opsx:propose → /opsx:implement → /opsx:verify → /opsx:archive', '适用': '快速迭代项目、旧代码库修改'}\n**Superpowers：** {'理念': '结构化强制流程 —九步brainstorming+ TDD+多Agent审查', 'GitHub星数': '约24万', '定位': '端到端重型开发方法论，可&组合技能集', '优势': '覆盖面广、强制质量门、视觉头脑风暴', '劣势': 'Token消耗大、学习曲线陡峭、慢且贵', '适用': '新项目开发、需严格质量保证的项目'}"
+  },
+  "resources": [
     {
-      "point": "OpenSpec的核心理念是SDD（Spec-Driven Development，规范驱动开发）：在AI编写任何代码之前，必须先和人类达成规范共识",
-      "source": "github.com/Fission-AI/OpenSpec + openspec.pro"
+      "title": "OpenSpec",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "type": "tool"
     },
     {
-      "point": "OpenSpec相比Superpowers更加轻量、聚焦。Superpowers有九步强制的brainstorming流程，而OpenSpec强调\"先写规范，再写代码\"",
-      "source": "视频描述"
+      "title": "openspec.pro",
+      "url": "https://openspec.pro",
+      "type": "blog"
     },
     {
-      "point": "OpenSpec 1.0后的重大更新包括早期beta的Stores功能和完整SDD工作流（explore→propose→implement→review→archive）",
-      "source": "OpenSpec官方文档 + GitHub"
+      "title": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "type": "tool"
     },
     {
-      "point": "核心工作流：/opsx:explore（探索性思考）→ /opsx:propose（生成提案）→ /opsx:implement（实现）→ 多阶段审查→ /opsx:archive（归档），每个变更独立文件夹存储",
-      "source": "OpenSpec GitHub README"
+      "title": "awesome-openspec",
+      "url": "https://github.com/speclib/awesome-openspec",
+      "type": "tool"
     }
   ],
-  "comparison": {
-    "OpenSpec": {
-      "理念": "规范驱动开发（SDD）—先写规范再写代码",
-      "GitHub星标": "约6万",
-      "定位": "轻量级、聚焦规范；specs+design+tasks三件套",
-      "优势": "轻量快速、低学习成本、Brownfield友好、30+工具支持",
-      "工作流": "/opsx:explore → /opsx:propose → /opsx:implement → /opsx:verify → /opsx:archive",
-      "适用": "快速迭代项目、旧代码库修改"
-    },
-    "Superpowers": {
-      "理念": "结构化强制流程 —九步brainstorming+ TDD+多Agent审查",
-      "GitHub星数": "约24万",
-      "定位": "端到端重型开发方法论，可&组合技能集",
-      "优势": "覆盖面广、强制质量门、视觉头脑风暴",
-      "劣势": "Token消耗大、学习曲线陡峭、慢且贵",
-      "适用": "新项目开发、需严格质量保证的项目"
-    }
-  },
-  "engineering_insights": {
-    "规范驱动vs规划驱动": "OpenSpec认为AI最大的问题不是不会写代码，而是\"不知道要什么\"—通过规范约束解决了AI瞎编代码的问题",
-    "闭环机制": "OpenSpec通过规范约束+反馈校验形成闭环——写规范→实现→对照规范审查→不符合→修改实现→完成归档",
-    "实践建议": "选择标准并非看Star数——要看项目复杂度、团队规模、期望的流程厚重程度。大规模新项目用Superpowers，已有代码库改造或轻量迭代用OpenSpec"
-  },
-  "sources": [
-    "https://github.com/Fission-AI/OpenSpec",
-    "https://openspec.pro",
-    "https://github.com/obra/superpowers",
-    "https://github.com/speclib/awesome-openspec"
-  ],
-  "research_date": "2026-07-19",
-  "categories": [
-    "AI编程工具与框架",
-    "论文与技术深度拆解"
-  ],
-  "summary": "",
-  "key_points": [],
-  "deep_research": {},
-  "resources": [],
   "takeaways": ""
 }

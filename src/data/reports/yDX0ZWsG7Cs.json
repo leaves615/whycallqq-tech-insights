@@ -1,0 +1,86 @@
+{
+  "video_id": "yDX0ZWsG7Cs",
+  "title": "Claude Code被指暗藏中国用户指纹？阿里禁用Anthropic背后",
+  "youtube_url": "https://www.youtube.com/watch?v=yDX0ZWsG7Cs",
+  "duration": "",
+  "summary": "Anthropic在Claude Code中暗藏隐写术标记以检测中国用户的争议事件及阿里全面禁用Anthropic产品",
+  "key_points": [
+    "2026年3月起，Claude Code v2.1.91+引入隐写术（steganography）标记：当检测到非官方ANTHROPIC_BASE_URL或代理网关时，通过时区、主机名匹配来判断用户身份",
+    "检测机制细节：base_url被覆盖→检查系统时区→匹配中国AI实验室/转售商/网关域名列表（列表通过XOR+base64隐藏）→将判断结果通过Unicode隐形变异编码进发给Anthropic的system prompt",
+    "Anthropic的回应：工程师Thariq Shihipar公开表示这是一项3月启动的实验，目的是防止未经授权的转售商账户滥用和防止蒸馏，已在7月1日移除相关代码",
+    "阿里响应：据China Daily报道，阿里2026年7月10日起内部禁止员工使用Claude Code，将其归类为\"高风险软件\"，要求使用公司自研的Qoder工具代替"
+  ],
+  "categories": [
+    "AI安全与伦理",
+    "AI模型深度评测",
+    "AI编程工具与框架",
+    "AI行业战略与趋势"
+  ],
+  "tags": [
+    "Claude Code",
+    "指纹追踪",
+    "Unicode隐写",
+    "阿里禁用",
+    "蒸馏",
+    "中美AI博弈"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "anthropic-is-removing-its-covert-code-for-catching-chinese-competitors",
+        "url": "https://www.theregister.com/2026/07/01/anthropic-is-removing-its-covert-code-for-catching-chinese-competitors",
+        "description": ""
+      },
+      {
+        "name": "alibaba-reportedly-bans-employees-from-using-claude-code",
+        "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code",
+        "description": ""
+      },
+      {
+        "name": "alibaba-bans-claude-code-anthropic-tracking-chinese-users",
+        "url": "https://thenextweb.com/news/alibaba-bans-claude-code-anthropic-tracking-chinese-users",
+        "description": ""
+      },
+      {
+        "name": "claude-code-prompt-steganography",
+        "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+        "description": ""
+      },
+      {
+        "name": "claude-code-china-fingerprint-hidden-detection-2026",
+        "url": "https://explainx.ai/blog/claude-code-china-fingerprint-hidden-detection-2026",
+        "description": ""
+      }
+    ],
+    "technical_details": "• 2026年3月起，Claude Code v2.1.91+引入隐写术（steganography）标记：当检测到非官方ANTHROPIC_BASE_URL或代理网关时，通过时区、主机名匹配来判断用户身份\n• 检测机制细节：base_url被覆盖→检查系统时区→匹配中国AI实验室/转售商/网关域名列表（列表通过XOR+base64隐藏）→将判断结果通过Unicode隐形变异编码进发给Anthropic的system prompt\n• Anthropic的回应：工程师Thariq Shihipar公开表示这是一项3月启动的实验，目的是防止未经授权的转售商账户滥用和防止蒸馏，已在7月1日移除相关代码\n• 阿里响应：据China Daily报道，阿里2026年7月10日起内部禁止员工使用Claude Code，将其归类为\"高风险软件\"，要求使用公司自研的Qoder工具代替",
+    "related_work": ""
+  },
+  "resources": [
+    {
+      "title": "anthropic-is-removing-its-covert-code-for-catching-chinese-competitors",
+      "url": "https://www.theregister.com/2026/07/01/anthropic-is-removing-its-covert-code-for-catching-chinese-competitors",
+      "type": "blog"
+    },
+    {
+      "title": "alibaba-reportedly-bans-employees-from-using-claude-code",
+      "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code",
+      "type": "blog"
+    },
+    {
+      "title": "alibaba-bans-claude-code-anthropic-tracking-chinese-users",
+      "url": "https://thenextweb.com/news/alibaba-bans-claude-code-anthropic-tracking-chinese-users",
+      "type": "blog"
+    },
+    {
+      "title": "claude-code-prompt-steganography",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+      "type": "blog"
+    },
+    {
+      "title": "claude-code-china-fingerprint-hidden-detection-2026",
+      "url": "https://explainx.ai/blog/claude-code-china-fingerprint-hidden-detection-2026",
+      "type": "blog"
+    }
+  ],
+  "takeaways": ""
+}

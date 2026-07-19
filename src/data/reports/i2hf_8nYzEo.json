@@ -1,0 +1,92 @@
+{
+  "video_id": "i2hf_8nYzEo",
+  "title": "不用开颅，AI能从脑磁信号恢复句子？拆解Meta Brain2Qwerty v2",
+  "youtube_url": "https://www.youtube.com/watch?v=i2hf_8nYzEo",
+  "duration": "",
+  "summary": "Meta Brain2Qwerty v2——端到端深度学习非侵入式脑机接口，从脑磁信号直接解码自然句子",
+  "key_points": [
+    "Brain2Qwerty v2是Meta在非侵入式脑机接口的里程碑进展：无需手术/植入电极，仅用MEG（脑磁图）信号即可实现实时的句子解码",
+    "核心性能数据：平均词准确率61%（39% WER），最佳参与者词准确率78%，超过一半句子解码误差在一个词以内。远优于此前非侵入方法的8%词准确率",
+    "技术架构革命性突破：摈弃传统特征工程管道，采用端到端深度学习直接处理原始MEG信号——卷积编码器+Transformer+字符级语言模型三组件协同"
+  ],
+  "categories": [
+    "论文与技术深度拆解"
+  ],
+  "tags": [
+    "Brain2Qwerty",
+    "脑机接口",
+    "非侵入式BCI",
+    "MEG",
+    "句子解码",
+    "Meta AI"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "",
+        "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/",
+        "description": ""
+      },
+      {
+        "name": "accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings",
+        "url": "https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings",
+        "description": ""
+      },
+      {
+        "name": "brain2qwerty",
+        "url": "https://github.com/facebookresearch/brain2qwerty",
+        "description": ""
+      },
+      {
+        "name": "SpanishBCBL",
+        "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL",
+        "description": ""
+      },
+      {
+        "name": "meta-ai-releases-brain2qwerty-v2-non-invasive-meg-brain-to-text",
+        "url": "https://www.marktechpost.com/2026/06/30/meta-ai-releases-brain2qwerty-v2-non-invasive-meg-brain-to-text",
+        "description": ""
+      },
+      {
+        "name": "s41593-026-02303-2",
+        "url": "https://www.nature.com/articles/s41593-026-02303-2",
+        "description": ""
+      }
+    ],
+    "technical_details": "**pipeline三部曲：** {'1_卷积编码器': '直接从原始MEG信号学习特征，替代传统手工打造的神经事件检测器', '2_Transformer': '建模信号中长期跨区域结构', '3_字符级语言模型': '限制输出到可能的文字——拒绝非词字符串，引导解码向人类可能键入文本'}\n**AI三大使能要素：** {'深度学习替代手工': '端到端替代hand-crafted event detection pipelines', 'LLM语义注入': '在神经数据上微调大型语言模型→提取语义表征→在嘈杂脑信号与连贯语言间架桥', 'AI Agent流水线优化': '部署AI agents迭代优化解码pipeline→自动代码开发→最终手动选择训练配置'}\n• Brain2Qwerty v2是Meta在非侵入式脑机接口的里程碑进展：无需手术/植入电极，仅用MEG（脑磁图）信号即可实现实时的句子解码\n• 核心性能数据：平均词准确率61%（39% WER），最佳参与者词准确率78%，超过一半句子解码误差在一个词以内。远优于此前非侵入方法的8%词准确率\n• 技术架构革命性突破：摈弃传统特征工程管道，采用端到端深度学习直接处理原始MEG信号——卷积编码器+Transformer+字符级语言模型三组件协同",
+    "related_work": ""
+  },
+  "resources": [
+    {
+      "title": "",
+      "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/",
+      "type": "blog"
+    },
+    {
+      "title": "accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings",
+      "url": "https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings",
+      "type": "blog"
+    },
+    {
+      "title": "brain2qwerty",
+      "url": "https://github.com/facebookresearch/brain2qwerty",
+      "type": "tool"
+    },
+    {
+      "title": "SpanishBCBL",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL",
+      "type": "blog"
+    },
+    {
+      "title": "meta-ai-releases-brain2qwerty-v2-non-invasive-meg-brain-to-text",
+      "url": "https://www.marktechpost.com/2026/06/30/meta-ai-releases-brain2qwerty-v2-non-invasive-meg-brain-to-text",
+      "type": "blog"
+    },
+    {
+      "title": "s41593-026-02303-2",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "type": "blog"
+    }
+  ],
+  "takeaways": ""
+}

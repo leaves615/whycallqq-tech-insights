@@ -1,8 +1,19 @@
 {
   "video_id": "z8Vgj5w1e2g",
   "title": "Token最高省60%：Superpowers v6真正优化了什么？",
-  "url": "https://www.youtube.com/watch?v=z8Vgj5w1e2g",
-  "category": "AI开发工具性能优化",
+  "youtube_url": "https://www.youtube.com/watch?v=z8Vgj5w1e2g",
+  "duration": "",
+  "summary": "Superpowers v6通过AI驱动的自优化（Fable 5）实现50%构建加速和60% Token成本降低的底层技术演进",
+  "key_points": [
+    "Superpowers v6发布背景：原本只是v5.2的小版本，但因Anthropic短暂开放Fable 5（后被收回）期间，Obra利用Fable进行了大规模自主优化实验",
+    "三大核心工程突破：（1）Coordinator→Reviewer handoff的review package预生成（shell脚本替代git命令），节省约10% token+wall-clock；（2）代码审查器和规范审查器的合并+提示词重构；③Fable驱动的25个量化实验的自治研发循环",
+    "Fable自治研发循环：36小时内跑了25个实验，花费约$165（Fable 5补贴价），产出最优配置：opus controller + elicited plan + conditional haiku implementers + terse reviewer contract"
+  ],
+  "categories": [
+    "AI模型深度评测",
+    "AI编程工具与框架",
+    "Agent与多Agent架构"
+  ],
   "tags": [
     "Superpowers v6",
     "Token优化",
@@ -11,60 +22,63 @@
     "Fable",
     "自治研发"
   ],
-  "core_topic": "Superpowers v6通过AI驱动的自优化（Fable 5）实现50%构建加速和60% Token成本降低的底层技术演进",
-  "key_findings": [
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "superpowers-6.html",
+        "url": "https://primeradiant.com/blog/2026/superpowers-6.html",
+        "description": ""
+      },
+      {
+        "name": "Superpowers-6",
+        "url": "https://blog.fsck.com/2026/06/15/Superpowers-6",
+        "description": ""
+      },
+      {
+        "name": "superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": ""
+      },
+      {
+        "name": "superpowers-autoresearch",
+        "url": "https://github.com/prime-radiant-inc/superpowers-autoresearch",
+        "description": ""
+      },
+      {
+        "name": "superpowers-evals",
+        "url": "https://github.com/prime-radiant-inc/superpowers-evals",
+        "description": ""
+      }
+    ],
+    "technical_details": "• Superpowers v6发布背景：原本只是v5.2的小版本，但因Anthropic短暂开放Fable 5（后被收回）期间，Obra利用Fable进行了大规模自主优化实验\n• 三大核心工程突破：（1）Coordinator→Reviewer handoff的review package预生成（shell脚本替代git命令），节省约10% token+wall-clock；（2）代码审查器和规范审查器的合并+提示词重构；③Fable驱动的25个量化实验的自治研发循环\n• Fable自治研发循环：36小时内跑了25个实验，花费约$165（Fable 5补贴价），产出最优配置：opus controller + elicited plan + conditional haiku implementers + terse reviewer contract",
+    "related_work": ""
+  },
+  "resources": [
     {
-      "point": "Superpowers v6发布背景：原本只是v5.2的小版本，但因Anthropic短暂开放Fable 5（后被收回）期间，Obra利用Fable进行了大规模自主优化实验",
-      "source": "primeradiant.com/blog/2026/superpowers-6.html"
+      "title": "superpowers-6.html",
+      "url": "https://primeradiant.com/blog/2026/superpowers-6.html",
+      "type": "blog"
     },
     {
-      "point": "三大核心工程突破：（1）Coordinator→Reviewer handoff的review package预生成（shell脚本替代git命令），节省约10% token+wall-clock；（2）代码审查器和规范审查器的合并+提示词重构；③Fable驱动的25个量化实验的自治研发循环",
-      "source": "primeradiant.com/blog + 实验日志"
+      "title": "Superpowers-6",
+      "url": "https://blog.fsck.com/2026/06/15/Superpowers-6",
+      "type": "blog"
     },
     {
-      "point": "Fable自治研发循环：36小时内跑了25个实验，花费约$165（Fable 5补贴价），产出最优配置：opus controller + elicited plan + conditional haiku implementers + terse reviewer contract",
-      "source": "superpowers- autoresearch实验日志"
+      "title": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "type": "tool"
+    },
+    {
+      "title": "superpowers-autoresearch",
+      "url": "https://github.com/prime-radiant-inc/superpowers-autoresearch",
+      "type": "tool"
+    },
+    {
+      "title": "superpowers-evals",
+      "url": "https://github.com/prime-radiant-inc/superpowers-evals",
+      "type": "tool"
     }
   ],
-  "technical_breakthroughs": {
-    "reviewer_handoff优化": {
-      "方法": "用shell脚本预生成review package（格式化diff + 元数据），替代reviewer手动执行git命令",
-      "效果": "token和wall-clock时间各降低约10%"
-    },
-    "审查器架构合并": {
-      "方法": "将代码质量审查器和spec合规审查器合并为一个，做两阶段（但只剩一个reviewer）",
-      "效果": "额外节省约15%的token和时间",
-      "注意": "风险发现：reviewer只看diff package时会confident地误判spec合规，0/5标记了缺失的brief"
-    },
-    "提示词重构": {
-      "tese_reviewer_contract": "审查输出量减少41%但判决准确无误",
-      "narration_recipe": "输出减少54%，方差为零",
-      "conditional_implementer_tiering": "每次运行节省约$0.5-1，E22证明正确拒绝haiku处理散文式计划"
-    }
-  },
-  "proven_dead_ideas": {
-    "控制器思维封顶": "反效果—turn数从92增至138，输出翻倍；thinking buys turn efficiency",
-    "计划中限制字数预算": "测试内容被削减62%，即使代码部分被豁免",
-    "Sonnet做plan generation": "保持保真度但破坏任务结构（collapse task structure）",
-    "实施版body放在plan中": "边际收益——tests + interfaces + structure is all you need（E28）"
-  },
-  "workflow_overview": "7步流程：brainstorming→隔离工作区→计划→TDD驱动实现→多阶段审查→分支完成→合并",
-  "supported_harnesses": "Claude Code, Codex CLI, OpenCode, Cursor, Pi, Antigravity, Kimi Code等",
-  "evals架构": "建立了专门的Superpowers evals suite（github.com/prime-radiant-inc/superpowers-evals），跨越不同harnesses和agents量化每次变更的影响",
-  "sources": [
-    "https://primeradiant.com/blog/2026/superpowers-6.html",
-    "https://blog.fsck.com/2026/06/15/Superpowers-6",
-    "https://github.com/obra/superpowers",
-    "https://github.com/prime-radiant-inc/superpowers-autoresearch",
-    "https://github.com/prime-radiant-inc/superpowers-evals"
-  ],
-  "research_date": "2026-07-19",
-  "categories": [
-    "AI编程工具与框架"
-  ],
-  "summary": "",
-  "key_points": [],
-  "deep_research": {},
-  "resources": [],
   "takeaways": ""
 }
