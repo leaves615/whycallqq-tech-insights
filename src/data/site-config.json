@@ -1,0 +1,70 @@
+{
+  "name": "WhyQQ 技术洞察",
+  "description": "基于 YouTube 频道 @whycallqq 的深度技术知识库，覆盖 AI 编程、模型评测、Agent 架构、行业趋势等领域的研究报告与对比分析",
+  "version": "0.1.0",
+  "source": "https://www.youtube.com/@whycallqq",
+  "categories": [
+    {
+      "id": "ai-tools",
+      "name": "AI编程工具与框架",
+      "icon": "🔧",
+      "description": "AI辅助编程工具、框架、方法论 — Superpowers、OpenSpec、Claude Code、Skills等"
+    },
+    {
+      "id": "ai-models",
+      "name": "AI模型深度评测",
+      "icon": "🧠",
+      "description": "大语言模型评测对比 — GPT、Claude、Kimi、DeepSeek、Gemini、Qwen等"
+    },
+    {
+      "id": "ai-agents",
+      "name": "Agent与多Agent架构",
+      "icon": "🤖",
+      "description": "AI Agent架构设计、多Agent协作、记忆系统、工作流编排"
+    },
+    {
+      "id": "ai-industry",
+      "name": "AI行业战略与趋势",
+      "icon": "📊",
+      "description": "AI行业动态、战略分析、算力竞争、人才趋势、收购并购"
+    },
+    {
+      "id": "ai-papers",
+      "name": "论文与技术深度拆解",
+      "icon": "📝",
+      "description": "前沿论文解读、技术原理深度分析、架构突破"
+    },
+    {
+      "id": "frontend-design",
+      "name": "前端工程与设计",
+      "icon": "🎨",
+      "description": "前端技术、浏览器底层、CSS布局、设计系统、AI辅助设计"
+    },
+    {
+      "id": "career",
+      "name": "程序员职业发展",
+      "icon": "🚀",
+      "description": "AI时代的程序员职业路径、技能升级、超级个体"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "ai-coding-frameworks",
+      "title": "AI编程框架大对决",
+      "items": ["Superpowers", "OpenSpec", "Claude Code", "Cursor", "Codex", "CodeGraph"],
+      "dimensions": ["Token效率", "设计隔离", "上下文管理", "代码理解", "易用性"]
+    },
+    {
+      "id": "llm-cost-matrix",
+      "title": "LLM模型性价比矩阵",
+      "items": ["GPT-5.6", "Claude Sonnet 5", "Claude Opus 4.6", "Kimi K3", "DeepSeek V4", "Gemini 3", "Qwen 3.7"],
+      "dimensions": ["价格", "编程能力", "推理能力", "上下文长度", "Token效率"]
+    },
+    {
+      "id": "token-optimization",
+      "title": "Token优化策略合集",
+      "items": ["Superpowers v6", "Codebase-Memory-MCP", "Headroom", "CodeGraph"],
+      "dimensions": ["节省比例", "技术方案", "适用场景", "副作用"]
+    }
+  ]
+}

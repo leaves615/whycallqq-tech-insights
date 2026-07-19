@@ -1,0 +1,44 @@
+{
+  "video_id": "C6-NQt6Vzrw",
+  "title": "为什么 AI 设计都长一样？ pols.dev 的反 Slop 设计法则拆解",
+  "youtube_url": "https://www.youtube.com/watch?v=C6-NQt6Vzrw",
+  "duration": "9分30秒",
+  "summary": "当前 AI 生成的网站普遍呈现出雷同的「模板化」特征——蓝紫渐变、毛玻璃按钮、Lucide 图标。问题不全在 AI 模型，更在于我们给出的设计指令过于模糊。视频深度拆解了 pols.dev 公开的「反 Slop 设计法则」，这份提示词梳理了近百种导致模板化的负面模式（Slop），并给出了四十多条正向做法。核心思想是：好的设计和好的代码一样，关键在于「做出清晰的决策」而非「避免错误」。",
+  "key_points": [
+    "AI 生成的 UI 普遍陷入「Slop」陷阱——蓝紫渐变、Inter 字体、Lucide 图标、Emoji 特性图标等模板化特征",
+    "反 Slop 的核心在于「约束编程」思维——不是告诉 AI 要做什么，而是明确告诉它不要做什么",
+    "pols.dev 的提示词包含 80+ 种负面模式识别和 40+ 条正向设计原则",
+    "「唯一性公式」：80% 成熟模式 + 20% 独特选择 = 有灵魂的设计",
+    "好的 AI 设计指令像代码审查——需要具体、可检查、可量化的约束条件"
+  ],
+  "categories": ["前端工程与设计", "论文与技术深度拆解"],
+  "tags": ["AI设计", "Slop", "pols.dev", "提示词工程", "设计系统", "UI/UX", "约束编程"],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "pols.dev/slop.md - 原版反 Slop 提示词",
+        "url": "https://pols.dev/slop.md",
+        "description": "Matías Battocchia 创建的提示词文件，详细列举了 AI 生成设计中的常见 Slop 模式和解决方案"
+      },
+      {
+        "name": "nexu-io/open-design - anti-ai-slop.md",
+        "url": "https://github.com/nexu-io/open-design/blob/main/craft/anti-ai-slop.md",
+        "description": "Open Design 项目中的反 Slop 规则（78.4k Stars），定义了七大罪（P0 必须修复）和软提示（P1/P2）"
+      },
+      {
+        "name": "Developers Digest - AI Design Slop: 16 Patterns",
+        "url": "https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it",
+        "description": "Adrian Krebs 对 1590 个 Show HN 页面进行了 Slop 评分，列出了 16 种 AI 设计模式"
+      }
+    ],
+    "technical_details": "反 Slop 设计法则本质上是一套「约束编程」框架应用于视觉设计领域。核心方法论分为三层：\n\n**P0 级（必须修复——七宗罪）：**\n1. 默认 Tailwind Indigo 色系（#6366f1等）——这是 AI 输出最典型的指纹\n2. 双色渐变 Hero（紫→蓝、蓝→青、靛→粉）\n3. Emoji 作为功能图标（✨🚀🎯⚡🔥💡）\n4. Sans-serif 用在标题上而设计系统已绑定衬线字体\n5. 圆角卡片 + 彩色左边框——经典的「AI 仪表盘卡片」形状\n6. 伪造指标（「10×更快」「99.9% 可用性」）\n7. 占位填充文本（lorem ipsum）\n\n**P1 级（应该修复）：**\n- Hero→Features→Pricing→FAQ→CTA 的标准序列\n- 使用外部占位图像 CDN\n- 超过 12 个原始 hex 值在 :root 之外\n- var(--accent) 用了 6 次以上\n\n**P2 级（最好修复）：**\n- 装饰性 blob/wave SVG 背景\n- 完美对称布局无视觉张力\n\n关键原理：AI 模型输出之所以雷同，根源在于训练数据中的设计模式高度集中，且默认系统提示词给了模糊的「做好设计」指令。解决方案不是更复杂的正向描述，而是给出一套具体的「禁止列表」——这正是约束编程的思路。",
+    "related_work": "**相关项目对比：**\n- **refero_skill**（MIT）：anti-ai-slop.md 的来源基础，最早提出「设计检查清单」概念\n- **Anti-Slop Skill**（Smithery）：跨领域的反 Slop 工具包，涵盖文字、代码、设计三个层面\n- **Stop Slop Skill**：专注于文字 Slop，检测「Here's the thing」「Let that sink in」等句式\n- **Claude Design Skill**（Anthropic）：官方推出的设计 Skill，内置 design.md 规范文件\n\n这些工具共同构成了「AI Slop 对抗生态」，从不同角度解决 AI 输出的同质化问题。"
+  },
+  "resources": [
+    {"title": "pols.dev/slop.md", "url": "https://pols.dev/slop.md", "type": "prompt"},
+    {"title": "nexu-io/anti-ai-slop.md (78.4k Stars)", "url": "https://github.com/nexu-io/open-design", "type": "tool"},
+    {"title": "Developers Digest - 16 AI Design Slop Patterns", "url": "https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it", "type": "blog"},
+    {"title": "refero_skill (MIT)", "url": "https://github.com/referodesign/refero_skill", "type": "tool"}
+  ],
+  "takeaways": "AI 生成设计走向同质化不是技术瓶颈，而是指令工程的瓶颈。反 Slop 法则的核心启示有三：第一，「禁止清单」比「允许清单」更有效——告诉 AI 什么是 Slop 比告诉它什么是好设计更精准。第二，设计需要「可检查的约束」——模糊的美学描述（「做得漂亮些」）无法转化为具体输出，必须像代码 lint 一样给设计定义检查规则。第三，20% 的独特灵魂比 80% 的标准化更重要——真正让人记住的设计，来自一个有意识的排版选择、一句有态度的文案、一个用过的产品才写得出的细节。"
+}

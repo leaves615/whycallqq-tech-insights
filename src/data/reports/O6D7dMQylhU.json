@@ -1,0 +1,81 @@
+{
+  "video_id": "O6D7dMQylhU",
+  "title": "你的AI编程总是翻车？因为你少做了一步：设计隔离",
+  "url": "https://www.youtube.com/watch?v=O6D7dMQylhU",
+  "category": "AI编程方法论",
+  "tags": [
+    "AI编程",
+    "设计隔离",
+    "Grill-me",
+    "Superpowers",
+    "OpenSpec",
+    "规划框架",
+    "代码生成"
+  ],
+  "core_topic": "深度拆解三种AI编程规划框架的工程哲学与方法论对比",
+  "key_findings": [
+    {
+      "point": "Matt Pocock的Grill-me（/grill-me）：压力测试式对抗访谈法，通过持续追问直到决策树全部解决，迫使开发者澄清需求中的模糊地带。该技能已进化为/grill-with-docs和domain-model工作流",
+      "source": "aihero.dev/skills-grill-me"
+    },
+    {
+      "point": "Obra的Superpowers Brainstorming：九步强制流程（braindump→最简miniwriteup→追问→recap→整理→反共识→安全性→yagni→深层issue），坚持即使最简单的项目也要先写设计文档",
+      "source": "YouTube视频描述 + Superpowers文档"
+    },
+    {
+      "point": "OpenSpec的Explore（/opsx:explore）：探索性思考技能，偏爱用ASCII图表快速表达系统结构，无需立即产生实际代码，先建立理解",
+      "source": "GitHub Fission-AI/OpenSpec"
+    },
+    {
+      "point": "三种哲学对比：Matt推崇对抗式\"烤问\"确保清晰度；Obra坚持结构化的分层文档驱动；OpenSpec强调轻量级的ASCII可视化+探索式思考",
+      "source": "视频描述综合"
+    }
+  ],
+  "three_frameworks_comparison": {
+    "Grillo-me": {
+      "作者": "Matt Pocock",
+      "核心理念": "对抗式访谈 — 通过持续追问让开发者自己发现设计缺陷",
+      "适用场景": "已有清晰想法但需要压力测试确认，中大型项目",
+      "工具链": "npx skills add mattpocock/skills, Slack集成",
+      "GitHub星标": "约17万",
+      "最新发展": "2026年7月推出v1.1，新增/wayfinder、/research、/implement等技能，grill-me功能增强，但已推荐使用domain-model作为默认规划入口"
+    },
+    "Superpowers Brainstorming": {
+      "作者": "Obra (Jesse Vincent)",
+      "核心理念": "分层结构化文档驱动 — 九步强制流程确保设计完整",
+      "适用场景": "需要可追溯、可审查的严格开发流程的项目",
+      "支持工具": "Claude Code, Codex CLI, OpenCode, Cursor等",
+      "GitHub星标": "约24万",
+      "最新发展": "v6版本token消耗降60%，构建速度提升50%"
+    },
+    "OpenSpec Explore": {
+      "作者": "Fission-AI",
+      "核心理念": "轻量级探索式设计 — 先探索理解，再形成规范",
+      "适用场景": "轻量项目、快速原型、Brownfield旧代码改造",
+      "支持工具": "30+工具包括Claude Code, Cursor, GitHub Copilot",
+      "GitHub星标": "约6万",
+      "最新发展": "SDD规范驱动开发，each change gets own folder结构"
+    }
+  },
+  "practical_guidance": {
+    "如何选择": "项目规模+团队成熟度决定框架选择：大型项目用Grillo/Superpowers，中小型项目用OpenSpec，需要交付规范用Superpowers",
+    "核心教训": "AI生成的代码总是\"差一点\"的原因是写代码前没有做设计隔离——必须先把需求澄清再动手",
+    "执行力建议": "先做设计（用任一框架），再做实现。别跳过设计步骤直接写代码"
+  },
+  "sources": [
+    "https://github.com/mattpocock/skills",
+    "https://www.aihero.dev/skills-grill-me",
+    "https://github.com/obra/superpowers",
+    "https://github.com/Fission-AI/openspec"
+  ],
+  "research_date": "2026-07-19",
+  "categories": [
+    "AI编程工具与框架",
+    "前端工程与设计"
+  ],
+  "summary": "",
+  "key_points": [],
+  "deep_research": {},
+  "resources": [],
+  "takeaways": ""
+}
