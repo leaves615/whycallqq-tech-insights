@@ -1,0 +1,29 @@
+{
+  "video_id": "hzLfDKUzl2M",
+  "title": "Loop Engineering实操指南",
+  "youtube_url": "https://www.youtube.com/watch?v=hzLfDKUzl2M",
+  "duration": "14分28秒",
+  "summary": "2026年AI工程领域正从Prompt Engineering转向Loop Engineering——不再手动提示代理，而是设计能自动提示代理的循环系统。Addy Osmani命名了这个范式，Peter Steinberger概括为「stop prompting your agents and start designing the loops that prompt them」。视频实操演示了Anthropic的6大Loop模式如何在Cursor和Claude Code中落地：从Cursor YOLO模式到Claude Code /loop指令，从动态工作流到AGENTS.md持久化记忆。",
+  "key_points": [
+    "范式转变：Prompt Engineering(单次交互)→Loop Engineering(自动循环)=从「操作者」到「架构师」",
+    "6大Loop模式在真实业务中的映射：每个模式对应一个日常开发场景",
+    "Cursor实操：YOLO模式=Turn-based Loop, Composer=Goal-based Loop, Rules=静态约束",
+    "Claude Code实操：/loop定义循环、/goal定义目标、动态工作流根据结果调整下一步",
+    "AGENTS.md的关键作用：持久化AI的记忆和规则→代码库级的「SOP」让Loop更可预测"
+  ],
+  "categories": ["AI编程工具与框架", "Agent与多Agent架构"],
+  "tags": ["Loop Engineering", "实操指南", "Claude Code", "Cursor", "AGENTS.md", "动态工作流"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Developers Digest Loop指南", "url": "https://www.developersdigest.tech/blog/loop-engineering-definitive-guide", "description": "Loop Engineering完整实战指南"},
+      {"name": "Claude Code Loop官方文档", "url": "https://claude.com/blog/getting-started-with-loops", "description": "Claude Code官方Loop模式说明"}
+    ],
+    "technical_details": "6大Loop模式实操映射：Turn-based(Cursor YOLO模式)/Goal-based(Claude Code /goal)/Time-based(/schedule定时任务)/Proactive(监听git→自动分类PR)/Self-correcting(AI审查AI)/Compound(多Loop嵌套)。动态工作流核心：AI根据中间结果动态选择下一步动作→不是预设路径而是根据状态分支决策。AGENTS.md在Loop中的作用：持久化约束→Agent在Loop中不会越界。",
+    "related_work": "与Codex /goal的对比：Claude Code的Loop更强调模式化设计，Codex更强调单目标持久化。与Superpowers的联动：压缩上下文→Loop中Token消耗更可控。"
+  },
+  "resources": [
+    {"title": "Developers Digest Loop全指南", "url": "https://www.developersdigest.tech/blog/loop-engineering-definitive-guide", "type": "guide"},
+    {"title": "Claude Code Loop官方", "url": "https://claude.com/blog/getting-started-with-loops", "type": "official"}
+  ],
+  "takeaways": "Loop Engineering的精髓不是「建更复杂的系统」，而是「用系统代替手动」。一个设计良好的Loop让AI自动完成=你节省的不是一次prompt的时间，而是每天几十次prompt的时间×365天。判断标准：如果一个重复流程你手动做了5次以上，就值得把它Loop化。"
+}

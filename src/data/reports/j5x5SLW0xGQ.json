@@ -1,0 +1,28 @@
+{
+  "video_id": "j5x5SLW0xGQ",
+  "title": "谷歌资深工程师断言：代码审查已死！当AI产出翻4倍，程序员如何保住饭碗？",
+  "youtube_url": "https://www.youtube.com/watch?v=j5x5SLW0xGQ",
+  "duration": "8分34秒",
+  "summary": "KTH皇家理工学院最新论文+谷歌资深工程师Addy Osmani长文共同揭示AI时代的代码审查危机：AI让代码产出翻4倍，但审查时间暴涨441%，缺陷率从9%飙升至54%。AI生成的代码更难读懂（逻辑跳跃、缺乏注释、结构非人类思维模式）。三套实战应对策略：单人用AI自审、团队用「AI初审+人类终审」、企业级用Loop Engineering自动化。",
+  "key_points": [
+    "数据触目惊心：AI使代码产出×4，审查时间+441%，缺陷率9%→54%——AI写得更快但更差",
+    "根本原因：AI代码结构不符合人类阅读习惯——逻辑跳跃、缺少设计意图注释、命名不一致",
+    "「用AI审查AI」是唯一出路：Loop Engineering——让AI先审代码再让人类做最终决策",
+    "单人策略：/grill-with-review模式（AI自我审查→生成diff分析→人类验证关键路径）",
+    "企业策略：AI初审筛掉80%低质量PR→人类专注商业逻辑和架构层面的最终审查"
+  ],
+  "categories": ["AI编程工具与框架", "程序员职业发展"],
+  "tags": ["代码审查", "Addy Osmani", "AI代码质量", "缺陷率", "Loop Engineering", "AI审查AI"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "KTH皇家理工学院论文", "url": "https://blog.lightnote.com.cn/google-senior-engineer-code-review-is-dead-ai-4x-output-programmers-career-survival/", "description": "AI代码产出翻4倍+审查时间暴涨441%的原始数据"},
+      {"name": "Addy Osmani长文", "url": "https://blog.lightnote.com.cn/google-senior-engineer-code-review-is-dead-ai-4x-output-programmers-career-survival/", "description": "谷歌资深工程师对AI代码审查危机的深度分析"}
+    ],
+    "technical_details": "代码审查危机的三个维度：①量：AI生成PR数暴涨→人类审查者时间不够②质：AI代码可读性差→审查需要更深理解而非浅检查③流程：传统审查依赖「写的人比你差」→但当写的人是AI，人类审查者失去了对质量的直觉判断。三套策略的核心都是让AI做第一层筛选——过滤掉明显有问题的代码。",
+    "related_work": "与ALE-Bench（97%失败）和Claude Code Loop（验证机制）的联动：AI生成代码需要自动验证+人工审查的双重保险。Superpowers v6和Headroom的Token优化让AI有更多context→代码质量可能改善。"
+  },
+  "resources": [
+    {"title": "Addy Osmani代码审查文章", "url": "https://blog.lightnote.com.cn/google-senior-engineer-code-review-is-dead-ai-4x-output-programmers-career-survival/", "type": "article"}
+  ],
+  "takeaways": "代码审查危机本质上是AI时代的一个结构性矛盾：AI产出速度远超人类验证速度。唯一的解不是「写慢点」而是「审查自动化」——让AI审查AI，人类只做最终决策。这意味着开发者的角色再次转变：从「写出好代码」→「设计好的审查流程」。代码质量管理的工程化能力将取代编码能力成为核心技能。"
+}

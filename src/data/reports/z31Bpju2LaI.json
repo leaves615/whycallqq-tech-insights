@@ -1,0 +1,27 @@
+{
+  "video_id": "z31Bpju2LaI",
+  "title": "解读Claude Fable 5：被阉割的神话，与烧钱的黑盒",
+  "youtube_url": "https://www.youtube.com/watch?v=z31Bpju2LaI",
+  "duration": "15分27秒",
+  "summary": "Fable 5发布后Reddit/Hacker News真实反馈揭露了官方跑分之外的真相：沃顿教授觉得它「后背发凉」般强大，但Token消耗速度快到企业难以承受。安全分类器频频误伤——普通医疗数据分析被判定为「生物恐怖主义」。完全体Mythos 5被锁在保险箱里只给特定机构。AI平权时代正在走向终结——未来是「信任权限」的竞争。",
+  "key_points": [
+    "Fable 5的两面性：能力惊人（沃顿教授「后背发凉」）但Token消耗让企业难以规模化使用",
+    "安全分类器误伤严重：医疗数据分析→「生物恐怖主义」判定——过度安全化破坏实用性",
+    "Mythos 5/Fable 5的阶级分化：未阉割版被锁在保险箱→「安全」成为权限壁垒的借口",
+    "未来AI竞争是「信任权限」之争：不是谁模型更好，而是谁被「信任」能用最强版本",
+    "Jeff Bezos 180亿投Anthropic的隐藏逻辑：企业客户愿意为「合规AI」支付溢价"
+  ],
+  "categories": ["AI模型深度评测", "AI安全与伦理"],
+  "tags": ["Fable 5", "Mythos 5", "安全分类器", "Token消耗", "AI阶级", "Anthropic", "信任权限"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Anthropic Fable 5发布", "url": "https://www.anthropic.com/news/claude-fable-5", "description": "Fable 5官方发布公告和性能声明"}
+    ],
+    "technical_details": "Fable 5能力vs成本矛盾：能力显著提升→但Token消耗增加→企业总成本上升。安全分类器三层过滤：内容安全+代码安全+安全审计→但假阳性率高。Mythos/Fable的阶级机制：提交背景审查→获得「信任权限」→解锁完整能力→小企业和个人工程师被排除在外。",
+    "related_work": "与Fable 5出口管制事件联动：出口管制+信任权限=双重管控。与Cursor收购+Grok Build的对比：一个管道是合规化(Anthropic)，一个管道是数据收集(SpaceX)，一个管道是开发者信任(Cursor原有)。"
+  },
+  "resources": [
+    {"title": "Anthropic Claude Fable 5", "url": "https://www.anthropic.com/news/claude-fable-5", "type": "official"}
+  ],
+  "takeaways": "Fable 5是一个双重寓言：技术上AI能力在加速增长，但政治上AI权限在加速分化。未来的AI竞争不是「谁的模型最强」而是「谁被允许用最强模型」。普通开发者面临的现实：你付得起API账单但可能拿不到完整权限。"
+}

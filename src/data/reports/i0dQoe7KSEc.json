@@ -1,0 +1,28 @@
+{
+  "video_id": "i0dQoe7KSEc",
+  "title": "Claude Code 22个Hack：June创始人的完整工作流",
+  "youtube_url": "https://www.youtube.com/watch?v=i0dQoe7KSEc",
+  "duration": "17分38秒",
+  "summary": "June创始人、Lyft联合创始人Matt Van Horn公开了他的22个Claude Code Hack——一套完整的Agentic Engineering工作流。他不用VS Code/Cursor，仅6个终端窗口用Claude Code维护了两个共34000+ Star的开源项目，同时成为Python核心贡献者。核心方法：plan.md驱动所有开发、TLDR审计而非阅读AI生成计划、6个并行终端调度、CLAUDE.md精确定义项目上下文。这是从Vibe Coding到Agentic Engineering的完整实战范例。",
+  "key_points": [
+    "plan.md是所有开发的入口——先写计划再让AI执行，plan即验收标准",
+    "TLDR审计模式：不看AI生成了什么代码，只看「做了什么」和「为什么」——信息密度提升100倍",
+    "6个并行终端窗口架构：1个主控+3个并行Agent+1个日志+1个Git——物理隔离不同任务上下文",
+    "CLAUDE.md即为项目DNA：不只是一堆提示词，而是让Claude「真正理解你的项目」的上下文工程",
+    "Compound Engineering插件+ /ce-plan指令：把Agent能力组合成工程流水线"
+  ],
+  "categories": ["AI编程工具与框架", "Agent与多Agent架构"],
+  "tags": ["Claude Code", "22个Hack", "Matt Van Horn", "plan.md", "Agentic Engineering", "并行Agent"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Matt Van Horn 22 Hacks公开发布", "url": "https://x.com/mvanhorn", "description": "June创始人公开分享的完整Claude Code方法论"}
+    ],
+    "technical_details": "22个Hack的精髓不是技巧而是「架构思维」：①plan.md = 需求规格化→把模糊任务变成AI可执行的标准作业流程 ②TLDR方式 = 用AI审查AI→不看代码看决策 ③6终端架构 = 流水线式并行开发→每个终端独立上下文避免污染 ④CLAUDE.md = 持久化项目上下文→新会话不用重来。与单个IDE操作的本质区别：一个人在IDE里操作→AI跟着人的节奏。6终端架构→人只是调度者，AI并行工作。",
+    "related_work": "与Karpathy(Agentic Engineering)/K3(Cursor报告)/Loop Engineering(实操指南)形成完整链条：理论→工具→方法论→实战。Matt Van Horn是目前最极端的案例：完全放弃IDE，只用终端+Claude Code。"
+  },
+  "resources": [
+    {"title": "Matt Van Horn X分享", "url": "https://x.com/mvanhorn", "type": "social"},
+    {"title": "June开源项目", "url": "https://github.com/juneHQ", "type": "code"}
+  ],
+  "takeaways": "Matt Van Horn的工作流不是「AI工具使用教程」而是「AI时代工程师的终极形态」——放弃IDE、放弃手动编码、只做架构决策和审查。22个Hack的本质是把软件工程的每个环节都替换为AI-native的方式：不是更快地写代码，而是不写代码。"
+}

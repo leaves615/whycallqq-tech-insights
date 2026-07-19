@@ -1,0 +1,29 @@
+{
+  "video_id": "EgQnBNJLAec",
+  "title": "Token为什么这么贵？前谷歌TPU架构师揭秘Token定价的物理极限",
+  "youtube_url": "https://www.youtube.com/watch?v=EgQnBNJLAec",
+  "duration": "14分55秒",
+  "summary": "前谷歌TPU架构师、MatX CEO Reiner Pope用7个数学方程从Roofline模型出发，逐层拆解Token定价背后的物理学。为什么Claude Code快速模式贵6倍？为什么Gemini在200K以上上下文突然涨价50%？为什么输出Token比输入Token贵3-5倍？这些答案都在批次大小(Batch Size)、KV缓存(KV Cache)和模型稀疏度(Sparsity)的算术中——大模型推理是一道精密的算术题，不是玄学。",
+  "key_points": [
+    "Roofline模型是理解Token成本的钥匙：内存带宽上限和算力上限共同决定一个操作的绝对成本下限",
+    "输出Token比输入贵3-5倍的物理原因：输出是串行生成（每次一个Token），输入是并行处理",
+    "长上下文涨价的本质：KV Cache容量随上下文长度线性增长→超过LLC→掉到HBM→成本跳升",
+    "快速模式贵6倍的原因：小batch size→更低的硬件利用率→单位Token成本更高",
+    "稀疏模型降本的物理基础：MoE等稀疏架构减少每次推理的活跃参数→减少内存带宽需求"
+  ],
+  "categories": ["AI模型深度评测", "论文与技术深度拆解"],
+  "tags": ["Token定价", "Roofline模型", "KV Cache", "推理成本", "TPU架构师", "稀疏模型"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Reiner Pope讲解视频", "url": "https://www.youtube.com/watch?v=xmkSf5IS-zw", "description": "前谷歌TPU架构师7个方程的Token定价课程"},
+      {"name": "Reiner Flashcards", "url": "https://reiner-flashcards.vercel.app", "description": "Reiner Pope的Token经济学知识卡片"}
+    ],
+    "technical_details": "7个核心概念链：Roofline模型→批次大小→KV缓存→稀疏度→输出vs输入→长上下文→定价策略。底层物理规律：GPU有固定内存带宽(IO/s)和算力(FLOPS/s)→每个操作受限于两者中更低的一方。Token生成是memory-bound（大部分时间在等数据从HBM到计算单元）。KV缓存：每生成了一个Token需存储其键值对(Key-Value cache)→上下文越长→KV Cache越大→超出SRAM→掉到HBM→成本跳升。稀疏模型(MoE)的经济学：只激活部分专家→每Token实际计算量减少→但路由开销增加。",
+    "related_work": "与DSpark投机解码、DeepSeek MLA的联动——都在用工程优化降低Token成本。Kimi K3的高Token消耗可能与其长上下文和MoE路由开销有关。pxpipe的视觉Token套利=绕过Token文本定价→利用不同通道的物理成本差异。"
+  },
+  "resources": [
+    {"title": "Reiner Pope Token经济学课程", "url": "https://www.youtube.com/watch?v=xmkSf5IS-zw", "type": "video"},
+    {"title": "Reiner Flashcards知识卡", "url": "https://reiner-flashcards.vercel.app", "type": "tool"}
+  ],
+  "takeaways": "Token定价不是随机定价策略，而是物理成本的映射。理解了Roofline模型和KV缓存，就能预测未来模型的降价趋势：稀疏化→降内存带宽需求→降价；大Batch推理→高利用率→降价；长上下文→KV缓存膨胀→涨价。对这些物理规律的掌握=读懂了AI产业的成本底层逻辑。"
+}

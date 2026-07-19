@@ -1,0 +1,27 @@
+{
+  "video_id": "fYdyLUAx3xo",
+  "title": "AI自己造AI，进化太快？Anthropic发出警告：正在失控边缘",
+  "youtube_url": "https://www.youtube.com/watch?v=fYdyLUAx3xo",
+  "duration": "8分32秒",
+  "summary": "Anthropic通过事实核查数据揭示了一个加速趋势：Claude完成任务的能力两年内从4分钟级别跃升到12小时级别，新员工入职从数周降到两天，Claude Code创造者Boris Cherny六个月前卸载了自己的IDE。这不是科幻——Anthropic是严肃研究机构，所有数据经事实核查。核心信号：递归自我改进虽未发生，但AI的代码吞吐量和任务能力的指数级增长已足以改变整个行业。",
+  "key_points": [
+    "两年内从4分钟→12小时：AI单次任务处理时长增长了180倍——这还不是递归自改的结果",
+    "Boris Cherny(Claude Code创造者)六个月前卸载了IDE——全靠Claude Code+终端工作",
+    "新员工入职培训从数周→两天：AI已经能教会新人如何使用AI",
+    "Anthropic警告重点：不是「AI要造反」，而是「AI能力增长得太快了」我们需要提前准备安全框架",
+    "即使无递归自改，单纯代码吞吐量+任务能力的指数增长已足以重塑所有行业"
+  ],
+  "categories": ["AI行业战略与趋势", "AI安全与伦理"],
+  "tags": ["Anthropic", "递归自我改进", "AI进化", "Boris Cherny", "Claude Code", "METR"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Anthropic事实核查数据", "url": "https://www.anthropic.com/research", "description": "Anthropic内部生产力数据和AI能力增长曲线"}
+    ],
+    "technical_details": "能力跃升曲线：METR基准测试→AI任务长度从分钟级→小时级。关键驱动：不是单个模型更强，而是模型+工具(Claude Code/MCP/Agent)的复合增长。Boris Cherny的工作流：卸载IDE→全部通过Claude Code终端操作→AI读取代码库→生成修改→测试→提交→完成。新员工培训：AI负责引导新员工了解代码库→回答上下文问题→自动生成第一个小任务让新人跟着学。递归自改的定义：AI能修改自己的源代码。当前状态：未发生→但路径逼近中。",
+    "related_work": "Demis Hassabis的AGI框架/AL-Bench(97%失败)/Karpathy Agentic Engineering的对比：AI在某些维度极速增长(代码生成) vs 某些维度停滞(迭代优化)→能力增长是锯齿状的。"
+  },
+  "resources": [
+    {"title": "Anthropic研究页面", "url": "https://www.anthropic.com/research", "type": "research"}
+  ],
+  "takeaways": "Anthropic的警告不是「恐慌叙事」而是「速度警觉」：AI的代码能力从4分钟→12小时只用了两年——如果这个速度持续，三年后AI可能独立完成数周级任务。关键启示：不要用今天的AI能力规划明天的策略——增长速度本身才是最大的风险（和机会）。"
+}

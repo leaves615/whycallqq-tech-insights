@@ -1,0 +1,27 @@
+{
+  "video_id": "uhTCHtxuT3w",
+  "title": "离谱！只有1%工程师做到了：46倍代码行、15倍PR",
+  "youtube_url": "https://www.youtube.com/watch?v=uhTCHtxuT3w",
+  "duration": "11分50秒",
+  "summary": "Cursor《2026年春季开发者习惯报告》首次披露AI编程的真实代差：P99超级用户日均AI代码行数是P50活跃用户的46倍，每周合并PR数是15倍。这不只是效率提升而是「工作方式的代差」。五大核心趋势：开发速度翻倍、模型成本质量博弈、超级用户鸿沟持续拉大、上下文Tokens爆发增长、AI代码进入提交流程比例上升。关键问题：你是P50还是P99？",
+  "key_points": [
+    "P99 vs P50代差：46倍代码行、15倍PR——同样的工具，不同工作流的产出差距两个数量级",
+    "五大趋势：①开发速度×2 ②模型选择转向性价比(Terra路线) ③超级用户鸿沟拉大 ④Token消耗暴涨 ⑤AI代码直接提交比例上升",
+    "P99超级用户的秘密不是「更多prompt」而是「更好的Agent工作流设计」——Agentic Engineering > Vibe Coding",
+    "上下文Tokens爆发增长→Token优化能力(Token Engineering)成为核心技能——省Token=省钱+提高AI质量",
+    "AI代码直接提交比例上升的警示：代码审查机制必须跟上——否则AI写的bug会直接进生产"
+  ],
+  "categories": ["AI编程工具与框架", "程序员职业发展"],
+  "tags": ["Cursor报告", "P99超级用户", "46倍代码行", "15倍PR", "Token爆发", "开发效率"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Cursor 2026春季开发者习惯报告", "url": "https://cursor.com/cn/insights#developer-acceleration", "description": "Cursor官方发布的开发者习惯数据报告"}
+    ],
+    "technical_details": "P99超级用户画像：不是写代码更快而是用Agent工作流替代手动操作。关键差异：P50用AI辅助(手动prompt→检查→修改→重复)，P99用AI自主(Loop Engineering→AI自动迭代→人工只在关键点审查)。Token消耗暴涨是效率的自然结果——越高效地用AI就越消耗Token→Token优化成为P99的关键技能。模型成本质量博弈在Cursor生态的体现：开发者开始根据任务类型切换模型(便宜模型处理简单任务→贵模型处理核心逻辑)。",
+    "related_work": "与BCG报告(74%使用率但66%无时间再分配指引)对比：Cursor数据说明「会用AI」的人真的在获得巨大优势→差距不在工具在于工作流。与Karpathy Agentic Engineering理论完全呼应：P99就是用Agentic Engineering方法的人。"
+  },
+  "resources": [
+    {"title": "Cursor开发者习惯报告", "url": "https://cursor.com/cn/insights#developer-acceleration", "type": "report"}
+  ],
+  "takeaways": "Cursor报告的数字不是「AI在替代人」而是「会用AI的人正在碾压不会用的人」——46倍代码行差距不是工具差距，是工作流设计差距。核心问题从「要不要用AI」变成了「你设计的AI工作流是P50级还是P99级」。P99的秘密：停止手动prompt，开始设计Agent Loop。"
+}

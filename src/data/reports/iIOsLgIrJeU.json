@@ -1,0 +1,29 @@
+{
+  "video_id": "iIOsLgIrJeU",
+  "title": "Transformer 架构挑战者出现？两篇顶级论文拆解",
+  "youtube_url": "https://www.youtube.com/watch?v=iIOsLgIrJeU",
+  "duration": "14分10秒",
+  "summary": "自2017年以来几乎所有大模型都基于Transformer，但它有「二次复杂度」的天生代价——记住上下文需要计算量爆炸增长。两篇顶级论文试图打破垄断：Google Research的Memory Cache给RNN加上智能缓存弥合低成本与强算力鸿沟；Transformer共同作者Llion Jones参与创办的Sakana AI提出CTM(连续思维机器)，试图把被AI抛弃的时间维度找回来。这是后Transformer时代的开端。",
+  "key_points": [
+    "Transformer的「暴力美学」面临挑战：注意力机制的二次复杂度→长上下文成本爆炸",
+    "Memory Cache：Google给RNN加上「保存按钮」→记住重要信息而忽略不重要的→线性复杂度替代二次复杂度",
+    "CTM连续思维机器：不是离散token生成而是连续状态动力学→像人脑一样在时间维度上「思考」",
+    "两篇论文的共同方向：不再追求更强Transformer，而是寻找Transformer的替代架构",
+    "后Transformer时代可能的方向：RNN复兴/Mamba状态空间模型/CTM连续动力学——架构多样性重启"
+  ],
+  "categories": ["论文与技术深度拆解", "AI模型深度评测"],
+  "tags": ["Transformer", "Memory Cache", "CTM", "Sakana AI", "RNN复兴", "二次复杂度", "架构创新"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Google Memory Cache论文", "url": "https://arxiv.org", "description": "Google Research团队提出的RNN+智能缓存架构"},
+      {"name": "Sakana AI CTM论文", "url": "https://sakana.ai/ctm", "description": "Transformer共同作者Llion Jones参与的连续思维机器"}
+    ],
+    "technical_details": "Transformer的二次复杂度：每生成一个token需要回顾所有历史token→计算量O(n²)。Memory Cache路线：RNN天然是线性的O(n)，过去因为「遗忘」问题被Transformer替代→加智能缓存解决遗忘→保持线性复杂度。CTM路线：抛弃离散token范式→连续状态随时间演化→像微分方程一样「思考」→时间维度被重新引入。",
+    "related_work": "与DeepSeek MLA(注意力压缩)的对比：MLA是在Transformer框架内优化→Memory Cache/CTM是试图跳出Transformer框架。与DeepSeek DSpark(投机解码)的对比：DSpark是系统层面优化推理，论文是架构层面试图突破天花板。"
+  },
+  "resources": [
+    {"title": "Google Memory Cache论文", "url": "https://arxiv.org", "type": "paper"},
+    {"title": "Sakana AI CTM论文", "url": "https://sakana.ai/ctm", "type": "paper"}
+  ],
+  "takeaways": "后Transformer时代的前奏：当所有人还在优化Transformer的注意力机制时，两个顶级团队已经开始挖Transformer的墙角——Memory Cache证明线性RNN可以追赶Transformer，CTM证明连续思维可能超越离散token生成。未来3年可能出现第一个非Transformer的主流大模型架构。"
+}
