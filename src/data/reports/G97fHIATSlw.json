@@ -1,0 +1,31 @@
+{
+  "video_id": "G97fHIATSlw",
+  "title": "Claude官方把Loop讲清了：4种模式到底怎么选",
+  "youtube_url": "https://www.youtube.com/watch?v=G97fHIATSlw",
+  "duration": "8分42秒",
+  "summary": "很多人用Claude Code写代码还是会出错或陷入无限循环——这不只是模型能力的问题。2026年6月30日Claude Code团队发布《Getting started with loops》官方指南，系统定义了Loop工程：Agent重复执行工作周期直到满足停止条件。视频将可靠Loop设计归纳为三个核心问题：怎么触发、如何验证、什么时候停止，并深度拆解了官方的四类Loop模式：Turn-based（轮次制）、Goal-based（目标制）、Time-based（时间制）和Proactive（主动式）。",
+  "key_points": [
+    "Loop Engineering的核心三问：触发机制设计（何时启动）、验证机制（如何判断对错）、停止条件（何时终止）——验证比自动化更重要",
+    "四类Loop模式：Turn-based适合已知步骤任务，Goal-based适合复杂目标，Time-based适合定时监控，Proactive适合需要Agent自主判断的场景",
+    "官方设计原则：停止条件必须是「可验证的」而非「模糊的」——「代码通过所有测试」比「代码看起来正确」有效100倍",
+    "两种烧钱失败模式：①Hands-on Loop跑进空房间无人看管 ②'While I sleep' routine 用于需要人手监督的任务",
+    "Loop设计 ≠ 提示词优化 — 这是从「操作者」转向「架构师」的思维跃迁"
+  ],
+  "categories": ["AI编程工具与框架", "Agent与多Agent架构"],
+  "tags": ["Claude Code", "Loop Engineering", "Agent设计", "工作流", "验证机制", "停止条件", "Anthropic"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Claude Code: Getting started with loops", "url": "https://claude.com/blog/getting-started-with-loops", "description": "Claude Code团队官方发布的Loop工程设计指南"},
+      {"name": "Developers Digest: The Definitive Guide to Loop Engineering", "url": "https://www.developersdigest.tech/blog/loop-engineering-definitive-guide", "description": "综合指南涵盖Claude Code和Codex的Loop实战"},
+      {"name": "Loop Engineering Crash Course", "url": "https://agentfactory.panaversity.org/docs/loop-engineering-crash-course", "description": "15个核心概念的完整教程，从触发到停止条件"}
+    ],
+    "technical_details": "**四类Loop模式详解：**\n\n1. **Turn-based Loop（轮次制）**\n   - 运行N轮即停止\n   - 适用：已知步骤数固定（如「检查5个模块」）\n   - 风险：步骤不够会未完成，步骤太多浪费Token\n\n2. **Goal-based Loop（目标制）**\n   - 以目标达成为停止条件\n   - 适用：复杂但可验证目标（如「所有测试通过」）\n   - 关键：验证机制必须程序化可检查，不能靠Agent自我判断\n\n3. **Time-based Loop（时间制）**\n   - 定时触发（如每小时检查一次状态）\n   - 适用：监控、周期性维护任务\n   - 实现：/schedule命令 + cron式触发\n\n4. **Proactive Loop（主动式）**\n   - Agent自主判断何时行动\n   - 适用：事件驱动场景（如「有新issue时自动分类」）\n   - 风险：如果触发条件模糊可能导致过度主动\n\n**Loop设计的两个烧钱陷阱：**\n- **陷阱1**：把Hands-on Loop（需要人在旁边看）当作Fire-and-forget使用\n- **陷阱2**：用'While I sleep' routine去做需要实时监督的复杂任务\n\n**正确姿势：**\n- 先定义验证器（verifier）再定义Loop\n- 停止条件必须是机器可检查的（lint通过、测试绿、构建成功）\n- 设置Token预算上限防无限烧钱",
+    "related_work": "**Codex的Loop对比：**\n- Codex使用 /goal 命令 — 类似Goal-based Loop\n- Codex的 /schedule — 类似Time-based Loop\n- 核心差异：Claude Code更强调验证机制的设计，Codex更强调任务分解\n\n**Loop vs 传统提示词工程：**\n- 提示词工程：关注单次交互的指令质量\n- Loop Engineering：关注多次交互的触发-执行-验证-停止闭环\n- 本质跃迁：从「写好提示让AI做」变成「设计系统让AI持续做正确的事」"
+  },
+  "resources": [
+    {"title": "Claude Code Loop官方指南", "url": "https://claude.com/blog/getting-started-with-loops", "type": "official"},
+    {"title": "Developers Digest Loop工程全指南", "url": "https://www.developersdigest.tech/blog/loop-engineering-definitive-guide", "type": "guide"},
+    {"title": "Loop Engineering Crash Course", "url": "https://agentfactory.panaversity.org/docs/loop-engineering-crash-course", "type": "course"}
+  ],
+  "takeaways": "Loop Engineering的本质是从「人工操作Prompt」到「设计自动化系统」的跃迁。三个核心理念：第一，验证比自动化更重要——如果不能用机器检查Agent的输出是否正确，再多自动化都会失控。第二，停止条件决定成本——模糊的停止条件（「做到满意为止」）是Token烧钱的根源。第三，Loop不是你睡着时用的工具——它最适合的场景是「你去做别的事，Agent按规则跑并自行验证」，而不是「你睡觉让Agent自由发挥」。「Stop prompting your agents, start designing the loops that prompt them」——这句话定义了AI编程的下一个阶段。"
+}

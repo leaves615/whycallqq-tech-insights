@@ -1,0 +1,43 @@
+{
+  "video_id": "UXfkQokND4g",
+  "title": "代码搜索省92% Token？拆解 Headroom 的上下文优化真相",
+  "youtube_url": "https://www.youtube.com/watch?v=UXfkQokND4g",
+  "duration": "13分33秒",
+  "summary": "Headroom是一个本地上下文优化层，通过三阶段管线（结构分析→内容压缩→智能拼接）和多种内容专用压缩器，在官方基准中实现Token消耗最高减少95%且无明显准确率下降。它不是魔法压缩器，而是针对AI编程场景中日志、工具输出和RAG检索结果冗余信息的工程化解决方案。视频联动Token物理极限和CodeGraph知识图谱两期内容，拼出AI算力成本优化的完整版图。",
+  "key_points": [
+    "Headroom三阶段管线：结构分析识别冗余→多压缩器针对性处理→智能拼接保留关键上下文",
+    "与Roofline模型和KV缓存物理规律的联动——Token优化不是单一技巧而是系统工程",
+    "基准测试：最高95% Token节省，无明显准确率下降",
+    "定位：本地上下文优化层（非替换知识图谱方案，而是互补）"
+  ],
+  "categories": [
+    "AI编程工具与框架"
+  ],
+  "tags": [
+    "Headroom",
+    "Token优化",
+    "上下文压缩",
+    "AI编程",
+    "Roofline",
+    "KV缓存"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "Headroom开源项目",
+        "url": "https://github.com/headroom",
+        "description": "三阶段管线上下文优化工具"
+      }
+    ],
+    "technical_details": "三阶段管线：①结构分析——区分代码/日志/工具输出/RAG结果等不同内容类型；②内容专用压缩——日志去时间戳+过滤重复，RAG结果去低相关度段落，工具输出提取关键状态；③智能拼接——保留压缩后内容的逻辑连贯性。关键洞察：不同内容类型的「冗余模式」不同，单一压缩算法无法高效处理所有类型。",
+    "related_work": "Token优化方案横向：Superpowers v6（结构化压缩 60%）、Codebase-Memory-MCP（知识图谱 99%）、pxpipe（计费漏洞 68%）、CodeGraph（AST图谱 57%）、Headroom（上下文过滤 92%）"
+  },
+  "resources": [
+    {
+      "title": "Headroom GitHub",
+      "url": "https://github.com/headroom",
+      "type": "code"
+    }
+  ],
+  "takeaways": "Headroom的启示：Token浪费的最大来源不是代码本身，而是日志、工具输出和RAG检索中的冗余。92%节省说明大多数AI编程的Token消耗是「可避免的噪声」而非「必要的信息」。"
+}

@@ -1,0 +1,26 @@
+{
+  "video_id": "KN04-zP8qa0",
+  "title": "OpenAI骗了你：GPT-5.6最强的不是Sol, 而是便宜到离谱的Terra",
+  "youtube_url": "https://www.youtube.com/watch?v=KN04-zP8qa0",
+  "duration": "11分34秒",
+  "summary": "GPT-5.6发布后很多人只看到Sol的跑分霸榜。但深扒68张官网交互图表后，三个反常识结论浮现：推理预算不严格单调（Max反而不如Xhigh在某些任务上）、多Agent边际收益快速递减（16 Agent成本2.5倍于4 Agent只换来1.11个百分点提升）、最可怕升级不是代码生成而是工具调用架构的底层重构。Sol/Terra/Luna的三层任务路由逻辑揭示了一个新范式：最强的不再是旗舰模型，而是最便宜的那个。",
+  "key_points": [
+    "Terra才是GPT-5.6的真正王牌——性能接近Sol但成本仅1/4，在大多数实际任务上是性价比最优解",
+    "推理预算非单调：「加大推理预算=更好结果」是错觉——某些任务上Max不如Xhigh，意味着存在最优推理预算点",
+    "多Agent边际收益递减：从4 Agent到16 Agent成本×2.5，性能仅+1.11pp——盲目堆Agent正在成为最昂贵的决策",
+    "Programmatic Tool Calling的底层重构：不是「更好的代码生成」而是「AI能通过代码调用任意工具」——这改变了整个架构范式",
+    "Sol/Terra/Luna任务路由：高价模型(Sol)处理核心推理，中价(Terra)处理常规任务，低价(Luna)处理简单任务"
+  ],
+  "categories": ["AI模型深度评测", "Agent与多Agent架构"],
+  "tags": ["GPT-5.6", "OpenAI", "Terra", "Sol", "Luna", "推理预算", "Programmatic Tool Calling", "多Agent"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "OpenAI GPT-5.6官方发布页", "url": "https://openai.com/index/gpt-5-6/", "description": "68张交互图表的完整官方页面"}
+    ],
+    "technical_details": "**GPT-5.6系列模型体系：**\n\n| 模型 | 定位 | 成本 | 最佳场景 |\n|------|------|------|----------|\n| **Sol** | 旗舰推理 | $$$$ | 数学证明、复杂逻辑推理 |\n| **Terra** | 性价比之王 | $ | 编程、通用任务、Agent工作流 |\n| **Luna** | 轻量快速 | ¢ | 简单问答、分类、摘要 |\n\n**Programmatic Tool Calling（编程式工具调用）**：\n- 传统方式：Function Call JSON → API\n- 新方式：模型直接生成代码调用工具 → 执行代码 → 工具调用完成\n- 核心变化：AI从「请求工具调用」变成「写代码调用工具」——灵活性跳跃\n\n**推理预算非单调性发现：**\n- 传统认知：更多推理token = 更好结果\n- 实际数据：在中难度任务上，Xhigh > Max，意味着存在「过度推理」\n- 工程意义：需要为不同任务调优推理预算，而非一律用Max\n\n**多Agent边际收益分析：**\n- 4 Agent → 16 Agent：成本×2.5，性能+1.11pp\n- 8 Agent → 16 Agent：成本×1.6，性能几乎不变\n- 结论：最优Agent数通常在4-8之间"
+  },
+  "resources": [
+    {"title": "OpenAI GPT-5.6官方", "url": "https://openai.com/index/gpt-5-6/", "type": "official"}
+  ],
+  "takeaways": "GPT-5.6的最大启示不是「AI又变强了」，而是「如何更聪明地使用AI」。三个关键转变：第一，从「选最强模型」转向「选性价比最优模型」——Terra才是大多数人的实际选择。第二，从「堆更多Agent」转向「找最优Agent数」——4-8个是最佳区间，多了几乎白花钱。第三，从「Function Calling」转向「Programmatic Tool Calling」——AI从工具消费者变成了工具构建者，这是比模型能力提升更深刻的架构变革。"
+}

@@ -1,0 +1,26 @@
+{
+  "video_id": "DTKR9d0GpYs",
+  "title": "Matt Pocock 的Skills v1.1 都更新了什么？",
+  "youtube_url": "https://www.youtube.com/watch?v=DTKR9d0GpYs",
+  "duration": "8分26秒",
+  "summary": "知名TypeScript教育者Matt Pocock给出反常识结论：AI编程的致命缺陷不是智商是「失忆」。他发布的Skills v1.1不是简单的提示词集合，而是一套将软件工程SOP（标准作业程序）强行注入AI大脑的框架。核心组件包括：反转沟通范式的/grill-with-docs（让AI主动提问而非被动执行）、用Spec统一文档语言消除歧义、以及处理大规模项目「战争迷雾」的/wayfinder。这是从「靠运气编程的Vibe Coding」走向「工程化AI编程」的关键方法论。",
+  "key_points": [
+    "AI编程致命缺陷：「失忆」而非「智商」——AI在执行长任务时丢失上下文和设计意图，导致越改越乱",
+    "Skills v1.1核心创新：反转沟通范式——/grill-with-docs让AI在被赋予任务前先「审问」代码库理解上下文",
+    "Spec驱动开发：用结构化Spec（而非自然语言描述）统一AI和人类对代码的理解语言",
+    "/wayfinder解决「战争迷雾」：大规模项目中自动定位相关代码文件，打破上下文窗口限制",
+    "工程化AI编程核心理念：SOP（标准作业程序）注入→AI行为可预测→告别Vibe Coding"
+  ],
+  "categories": ["AI编程工具与框架"],
+  "tags": ["Matt Pocock", "Skills", "Vibe Coding", "AI编程", "TypeScript", "SOP", "Cursor", "Claude Code"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Matt Pocock Skills GitHub", "url": "https://github.com/mattpocock/skills", "description": "Skills v1.1开源项目仓库"}
+    ],
+    "technical_details": "**Skills v1.1 核心机制：**\n\n1. **/grill-with-docs（反转沟通范式）**\n   - 传统方式：人→AI「实现X功能」\n   - Skills方式：AI先「审问」现有代码和文档，理解架构后再动手\n   - 效果：减少AI「不懂装懂」导致的破坏性修改\n\n2. **Spec统一语言**\n   - 问题：自然语言描述功能需求→AI自行理解→实现偏差\n   - 解决：用结构化Spec（类OpenAPI/Typespec）作为AI和人的「翻译层」\n   - 核心：Spec是可测试的，不像自然语言那样有歧义\n\n3. **/wayfinder（大规模项目导航）**\n   - 问题：代码库超过上下文窗口，AI只能看到部分文件\n   - 解决：自动索引项目结构，按相关性排序需要读取的文件\n   - 类似Codebase-Memory-MCP但更轻量\n\n**与OpenSpec/Superpowers的定位差异：**\n- Skills更偏「个人知识注入」——把你的工程标准变成AI的行为约束\n- OpenSpec更偏「项目规范」——定义项目级的设计规则\n- Superpowers更偏「Token优化」——压缩上下文降低成本"
+  },
+  "resources": [
+    {"title": "Matt Pocock Skills GitHub", "url": "https://github.com/mattpocock/skills", "type": "tool"}
+  ],
+  "takeaways": "Matt Pocock的方法论揭示了一个残酷真相：AI编程工具不会让你从差程序员变好程序员，只会在你的基础上放大。如果你没有清晰的SOP、没有结构化的设计思维，AI只会更高效地「帮」你写出更多糟糕的代码。Skills v1.1的本质是把「资深工程师的隐性工作习惯」编码成AI的运行规则——这决定了AI是你的「代码倍增器」还是「混乱倍增器」。"
+}

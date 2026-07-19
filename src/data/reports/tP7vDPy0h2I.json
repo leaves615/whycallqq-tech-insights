@@ -1,0 +1,44 @@
+{
+  "video_id": "tP7vDPy0h2I",
+  "title": "Agent版Next.js来了？文件系统即Agent！拆解 eve",
+  "youtube_url": "https://www.youtube.com/watch?v=tP7vDPy0h2I",
+  "duration": "11分6秒",
+  "summary": "eve是一个将「文件系统即Agent」概念产品化的框架——类似Next.js将文件系统映射为路由，eve将文件系统映射为Agent行为。每个文件/目录可以定义自己的Agent行为规则，Agent读取文件结构就能理解系统行为。这代表了AI编程基础设施从「代码生成」到「架构生成」的范式跃迁。",
+  "key_points": [
+    "eve核心理念：文件系统即Agent——目录结构定义Agent拓扑，配置文件定义Agent行为",
+    "类似Next.js的路由约定：文件放在某目录→自动拥有某Agent行为，无需手动配置",
+    "与传统Agent框架的区别：不是编程式定义Agent交互，而是声明式通过文件结构定义",
+    "设计哲学：让Agent像理解代码库一样理解自己的行为规则——统一开发者和Agent的认知模型"
+  ],
+  "categories": [
+    "Agent与多Agent架构",
+    "AI编程工具与框架"
+  ],
+  "tags": [
+    "eve",
+    "文件系统Agent",
+    "Next.js",
+    "Agent框架",
+    "声明式",
+    "AI编程基础设施"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "eve项目",
+        "url": "https://github.com/eve",
+        "description": "文件系统即Agent框架"
+      }
+    ],
+    "technical_details": "核心创新：用文件系统的层级结构天然映射Agent拓扑——父目录=协调Agent，子目录=执行Agent，配置文件=Agent行为约束。对比传统Agent框架（编程式定义workflow），eve让Agent理解自己行为的方式和开发者理解项目行为的方式一致。灵感和Next.js的约定式路由一样：把「约定」变成「基础设施」，减少手动配置。",
+    "related_work": "对比：LangChain/LangGraph（编程式workflow定义）、OpenSpec（SDD规范驱动）、eve（文件结构驱动）。eve是唯一用文件系统本身作为Agent定义语言的方案。"
+  },
+  "resources": [
+    {
+      "title": "eve GitHub",
+      "url": "https://github.com/eve",
+      "type": "code"
+    }
+  ],
+  "takeaways": "eve代表了一个重要方向：AI编程基础设施正在从「帮你写代码」进化到「帮你定义架构」。就像Next.js用文件系统约定替代了手动路由配置，eve试图用文件系统约定替代手动Agent配置。这暗示了AI编程的下一个范式——不是AI写更多代码，而是AI和人类共享一套「架构语言」，文件系统成为这个语言的载体。"
+}

@@ -1,0 +1,45 @@
+{
+  "video_id": "BZgU8FIarEs",
+  "title": "斯坦福最新报告：DeepSeek背后的人才管道，可能比算力更值得警惕",
+  "youtube_url": "https://www.youtube.com/watch?v=BZgU8FIarEs",
+  "duration": "11分45秒",
+  "summary": "Hoover Institution与Stanford HAI联合发布白皮书，梳理DeepSeek的356名研究/工程贡献者，为282人建立公开学术画像。核心发现：中国已形成越来越独立的本土AI人才管道，同时一批有美国研究机构经历的顶尖人才回流构成了美国留才问题中最值得关注的群体。这不仅是中美科技战的缩影，更揭示了AI竞争的本质——人才管道>算力规模。",
+  "key_points": [
+    "DeepSeek 356名贡献者中282人被建立学术画像——中国AI人才规模和质量已形成独立生态",
+    "31名核心成员中多人有美国顶级机构经历——人才回流是美国最严峻的留才挑战",
+    "Hoover+Stanford联合研究=美国顶尖学术机构对中国AI人才优势的「系统性焦虑」",
+    "报告核心结论：算力可以被封锁，但独立人才管道一旦形成，技术自主就是时间问题"
+  ],
+  "categories": [
+    "AI行业战略与趋势",
+    "AI模型深度评测"
+  ],
+  "tags": [
+    "DeepSeek",
+    "斯坦福",
+    "AI人才",
+    "中美科技",
+    "人才管道",
+    "Hoover",
+    "算力"
+  ],
+  "deep_research": {
+    "original_sources": [
+      {
+        "name": "Hoover-Stanford白皮书",
+        "url": "https://hoover-s3-website.s3.us-west-2.amazonaws.com/s3fs-public/research/docs/WhitePaper_Hoover_HAI_DeepSeek_FINAL%203.pdf",
+        "description": "DeepSeek AI人才竞争白皮书"
+      }
+    ],
+    "technical_details": "报告方法论：①从DeepSeek公开发表物识别356名贡献者；②为282人建立学术画像（教育背景、发表记录、机构经历）；③识别31名核心成员。发现中国AI人才管道三阶段：2018年前（依赖海外留学）→2018-2023（本土培养起步）→2023至今（独立人才生态形成）。美国核心挑战：不仅人才回流，而是回流的顶尖人才（有顶级会议发表经历）在带团队和培养下一批。",
+    "related_work": "对比：Kimi K3（月之暗面）也是清华系人才+中国本土培养路径；Inkling（Thinking Machines）是前OpenAI CTO带队的美国新势力。人才来源正在成为模型竞争力的先行指标。"
+  },
+  "resources": [
+    {
+      "title": "Hoover-Stanford白皮书PDF",
+      "url": "https://hoover-s3-website.s3.us-west-2.amazonaws.com/s3fs-public/research/docs/WhitePaper_Hoover_HAI_DeepSeek_FINAL%203.pdf",
+      "type": "paper"
+    }
+  ],
+  "takeaways": "算力可以被封锁，人才管道无法被封锁。DeepSeek的真正壁垒不是V4的跑分，而是它背后已经形成的独立人才培养体系。对技术从业者：未来十年AI竞争的核心变量不是GPU数量，而是顶尖AI人才的流向——你选择在哪里工作，就是在选择站在人才管道的哪一端。"
+}

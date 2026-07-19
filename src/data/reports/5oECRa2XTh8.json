@@ -1,0 +1,27 @@
+{
+  "video_id": "5oECRa2XTh8",
+  "title": "骗过Claude视觉系统！他把代码转成图片，省了70% API费用",
+  "youtube_url": "https://www.youtube.com/watch?v=5oECRa2XTh8",
+  "duration": "10分42秒",
+  "summary": "GitHub开源项目pxpipe利用大模型视觉通道的计费漏洞实现「赛博薅羊毛」：将长篇系统提示词、工具文档和历史对话全部渲染成密密麻麻的黑白图片发给模型。因为图像Token按像素面积而非字符数计费，这种「文本转图片」的野路子能在真实AI编程场景中省下68%的API费用。更深层发现：大模型视觉系统不是OCR——当像素不清晰时模型不会报错，而是产生「无声的幻觉」。pxpipe在Fable 5上迎来质的飞跃，因为Fable 5的视觉定价更低。",
+  "key_points": [
+    "pxpipe核心技巧：将文本渲染为图像→利用图像Token按像素计费（而非按字符）→节省68%API费用",
+    "计费机制漏洞：图像Token计费按面积，密集文字像素面积远小于同等文本的Token数",
+    "深刻技术发现：大模型视觉系统≠OCR——不清晰时不会报错，而是产生「无声幻觉」→有损压缩的工程风险",
+    "pxpipe在Fable 5上效果最佳——因为Fable 5的视觉定价更低，文本定价更高→套利空间最大",
+    "Cache对齐优化：pxpipe通过缓存策略设计，让重复的「提示词图片」能被模型缓存，进一步降本"
+  ],
+  "categories": ["AI模型深度评测", "AI编程工具与框架"],
+  "tags": ["pxpipe", "Claude视觉", "Token优化", "API费用", "幻觉", "有损压缩", "Fable 5"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "pxpipe GitHub", "url": "https://github.com/teamchong/pxpipe", "description": "文本转图片的Token优化开源项目"}
+    ],
+    "technical_details": "**pxpipe的工作原理：**\n1. 收集需要发送的系统提示词、工具文档、历史对话\n2. 将这些文本渲染为高密度黑白PNG图片\n3. 将图片嵌入对话代替原始文本\n4. 模型通过视觉通道「读取」图片中的文字\n\n**计费经济学：**\n- 文本Token：按字符数计费（1000字符≈250 tokens≈$X）\n- 图像Token：按像素面积计费（例如1024×1024≈$Y，$Y远小于长文本的$X）\n- 节省原理：密集文字的像素面积远小于同等信息量的文本Token数\n\n**「无声幻觉」的技术含义：**\n- VLM（视觉语言模型）的视觉编码器对低分辨率/小字号的文字处理不可靠\n- 与OCR的关键区别：OCR遇到不清晰的文字会返回低置信度，但VLM会「自信地猜测」\n- 风险：关键信息可能被「无声篡改」——用户看不出因为图片上的文字已经被模型「翻译」过了\n\n**为什么Fable 5上效果最好：**\n- Fable 5的文本Token定价：高\n- Fable 5的视觉Token定价：相对低\n- 套利空间 = 文本费用 - 图像费用 → Fable 5的套利空间最大",
+    "related_work": "**其他Token优化路线对比：**\n- **Superpowers v6**：压缩上下文（结构化压缩）→省60%\n- **Codebase-Memory-MCP**：知识图谱替代上下文→省99%\n- **pxpipe**：文本转图像→省68%\n- **Headroom**：智能文件筛选→省92%\n\npxpipe是唯一利用「计费模型漏洞」而非「信息压缩」的方案——这是套利不是优化，有被平台修复的风险。"
+  },
+  "resources": [
+    {"title": "pxpipe GitHub", "url": "https://github.com/teamchong/pxpipe", "type": "code"}
+  ],
+  "takeaways": "pxpipe是一个天才的hack，也是AI API经济的警示信号。三个思考：第一，计费模型的不一致性创造了套利空间——这说明AI API定价还没成熟，存在「规则漏洞」。第二，无声幻觉是一个被严重低估的风险——我们信赖AI的输出，但当输入本身经过了有损压缩（文本→图片→再读回文本），信息的保真度到底有多少？第三，这种方案本质上是脆弱的——一旦平台修复视觉定价模型，节省就会消失。真正的Token优化应该从信息结构入手（Superpowers/Codebase-Memory），而非从定价漏洞入手。"
+}

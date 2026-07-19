@@ -1,0 +1,31 @@
+{
+  "video_id": "Qjm_dBNMyAE",
+  "title": "突发：Grok窃取用户整个代码库 马斯克12分钟内回应 并承诺零残留删除",
+  "youtube_url": "https://www.youtube.com/watch?v=Qjm_dBNMyAE",
+  "duration": "8分52秒",
+  "summary": "安全研究者通过网络流量拦截发现，xAI的Grok Build CLI 0.2.93默认上传了整个Git仓库到Google Cloud——包括完整的Git历史和.env密钥文件。在12GB测试仓库中，模型交互通道只传输了192KB，但存储通道传出至少5.10GB（27800倍差距）。更严重的是，关闭「改进模型」开关后整库上传仍然发生——这个开关只管模型训练授权，不等于禁止代码离开本机。马斯克12分钟内回应并承诺「零残留删除」，但这暴露了AI编码工具的信任危机——不是恶意窃取，而是产品设计全面失控。",
+  "key_points": [
+    "Grok Build CLI 0.2.93默认上传整个Git仓库（含.git历史和.env密钥），数据量是模型交互所需的27800倍",
+    "关闭「改进模型」开关（训练数据授权）不能阻止上传——代码仍会被传输到云端用于「会话追踪和远程恢复」",
+    "马斯克12分钟内回应，承诺删除全部用户数据——但缺乏独立审计，仅是公开承诺",
+    "对比：Claude Code/Gemini/Codex只传输单文件，Grok Build是唯一整库上传的AI CLI工具",
+    "事件本质：不是恶意窃取，而是产品设计失控——功能范围、默认值和告知机制三重失控"
+  ],
+  "categories": ["AI安全与伦理", "AI编程工具与框架"],
+  "tags": ["Grok", "xAI", "代码安全", "数据泄露", "隐私", "AI CLI", "供应链安全", "马斯克"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Cereblab安全研究报告", "url": "https://x.com/IntCyberDigest/status/2076765766901174664", "description": "安全研究者Cereblab发布的Grok Build CLI网络流量拦截分析"},
+      {"name": "The Register报道", "url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123", "description": "详细的第三方报道，含服务端修复确认"},
+      {"name": "FirstPost报道", "url": "https://www.firstpost.com/tech/elon-musk-vows-purge-after-grok-build-reportedly-uploaded-entire-git-repositories-to-the-cloud-14031379.html", "description": "马斯克回应和修复措施的综合报道"}
+    ],
+    "technical_details": "**事件技术分析：**\n\n**发现过程：** 安全研究者Cereblab使用mitmproxy拦截Grok Build CLI的网络流量，发现在一个12GB测试仓库中：\n- 模型交互通道（发送给LLM的上下文）：仅192KB\n- 存储通道（上传到Google Cloud）：至少5.10GB\n- 包含内容：完整Git历史（.git目录）、未读取的追踪文件、.env环境变量文件\n\n**设计缺陷链：**\n1. **功能范围失控**：为实现「会话追踪和远程恢复」功能，默认上传远超必要的数据\n2. **默认值失控**：整库上传是默认行为，安装和快速入门材料未清楚说明\n3. **告知机制失控**：「改进模型」开关的语义欺骗——用户以为关闭它能阻止数据上传，但它只控制训练授权\n\n**对比其他AI CLI的数据传输策略：**\n- Claude Code：仅读取、传输与当前任务相关的文件\n- Gemini CLI：单文件级别传输\n- Codex CLI：仅传输prompt指定的上下文\n- Grok Build：整库打包上传\n\n**修复状态：**\n- 服务端修复已部署：停止整库上传行为\n- /privacy命令可关闭数据留存\n- 但缺乏独立审计确认数据已真正删除",
+    "related_work": "**AI工具安全设计原则（本事件启示）：**\n\n1. **最小数据传输原则**（Data Minimization）：只传输任务必需的上下文\n2. **知情同意原则**（Informed Consent）：清晰告知用户什么数据被传输、为什么传输\n3. **开关语义词对齐**（Semantic Correctness）：隐私开关的文本必须与实际行为一致\n4. **独立审计必要性**（Independent Audit）：厂商承诺需要第三方验证\n\n**相关事件对比：**\n- **axios投毒案**（2026）— 供应链攻击 + AI辅助社工\n- **Claude Code中国用户指纹**争议 — 数据合规问题\n- **Cursor套壳Kimi K2.5** — 透明度和信任问题\n\nAI工具的安全信任正在成为核心竞争力——不是功能最强就能赢，而是最可信的才能被企业采用。"
+  },
+  "resources": [
+    {"title": "Cereblab Grok Build安全分析", "url": "https://x.com/IntCyberDigest/status/2076765766901174664", "type": "report"},
+    {"title": "The Register详细报道", "url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123", "type": "news"},
+    {"title": "mitmproxy流量拦截工具", "url": "https://mitmproxy.org/", "type": "tool"}
+  ],
+  "takeaways": "Grok Build事件是一场AI工具信任危机的导火索。三个最深层的教训：第一，「默认安全」必须成为AI工具的设计第一原则——不能把安全责任推给用户去配置。第二，隐私开关的语义必须与行为一致——「改进模型」=「允许训练」≠「允许上传」，这种语义模糊正在摧毁用户信任。第三，AI CLI工具的数据传输策略将成为企业选型的核心考量——如果你的代码库包含商业机密，你必须在选择AI工具时验证它的数据传输行为。这次事件不是xAI一家的问题，而是整个AI工具行业必须面对的信任拷问。"
+}
