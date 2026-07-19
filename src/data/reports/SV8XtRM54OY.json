@@ -1,0 +1,27 @@
+{
+  "video_id": "SV8XtRM54OY",
+  "title": "硬刚DeepSeek？Qwen3.7-Max硬核拆解",
+  "youtube_url": "https://www.youtube.com/watch?v=SV8XtRM54OY",
+  "duration": "8分27秒",
+  "summary": "阿里Qwen3.7-Max作为面向Agent时代设计的最新专有模型，在某些维度接近Claude Opus 4.6 Max并超过DeepSeek V4 Pro Max的部分公开指标。但跑分高=好用？视频从工程师真实视角抛开表面基准，深入代码生成、多Agent编排、长期自主执行的实战表现，同时与GPT-5.5/Gemini 3.5 Flash/Claude Opus 4.7做经济账对比。关键创新在「跨框架泛化能力」——一个模型适配多种Agent框架。",
+  "key_points": [
+    "Qwen3.7-Max定位：Agent时代的模型→不是纯粹的对话Agent而是能在多个Agent框架中无缝工作的通用引擎",
+    "基准表现靠近Claude Opus 4.6 Max和DeepSeek V4 Pro Max→但真正的差异在Agent编排能力而非单次对话质量",
+    "跨框架泛化：在LangChain/LangGraph/Claude Code/Cursor等不同框架中表现一致→多Agent部署的优势",
+    "经济账：与GPT-5.5(Gemini 3.5 Flash)的价格对标→中国模型Agent场景的性价比竞争",
+    "Agent时代模型vs对话模型的关键区别：Agent模型要能在多工具、多上下文中保持一致性→看重稳定性而非峰值性能"
+  ],
+  "categories": ["AI模型深度评测", "Agent与多Agent架构"],
+  "tags": ["Qwen3.7-Max", "阿里", "Agent模型", "DeepSeek", "跨框架泛化", "Agent编排", "SWE-Bench"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Qwen3.7-Max官方发布", "url": "https://qwenlm.github.io/blog/qwen3.7-max/", "description": "阿里通义千问Qwen3.7-Max发布和技术架构"}
+    ],
+    "technical_details": "Agent模型评估维度：①Tool Calling准确率(工具多→调用正确的比例)→Qwen3.7-Max重点优化 ②多Agent编排稳定性(多个任务并行时不降智)→跨框架泛化是核心创新 ③长期执行一致性(1小时+的任务不出现漂移) ④Token经济性(Agent任务通常涉及大量工具调用→Token成本更高)。与DeepSeek V4 Pro Max的比较：DeepSeek在编码上可能更强（全球第一），Qwen在Agent编排上可能更优。经济账：如果Agent场景的性价比是Qwen的优势而不在于码场景。",
+    "related_work": "GPT-5.6的Agent路线（Sol/Terra/Luna分层+Programmatic Tool Calling）vs Qwen3.7-Max的Agent路线（跨框架泛化=平台无关的Agent能力）。这是两种思路：OpenAI选择「自己做Agent基础设施（Codex）」，阿里选择「适配别人的Agent基础设施」→不想控制工具，而是想在所有工具中都好用。"
+  },
+  "resources": [
+    {"title": "Qwen3.7-Max博客", "url": "https://qwenlm.github.io/blog/qwen3.7-max/", "type": "official"}
+  ],
+  "takeaways": "Qwen3.7-Max的战略是「Agent时代的中立模型供应商」——不绑定任何Agent框架，适配所有框架。与OpenAI（框架+模型一体化）和Anthropic（Claude Code绑定）形成竞争角色不同。如果你不想被某个Agent框架绑定→选Qwen3.7-Max。如果你想端到端的闭环体验→选Claude Code(Fable 5)+Claude平台或Codex+GPT-5.6。"
+}

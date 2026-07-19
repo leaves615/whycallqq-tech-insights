@@ -1,0 +1,23 @@
+{
+  "video_id": "7X9f_xbLWUE",
+  "title": "84个带签名的恶意包：深度拆解TanStack供应链攻击的致命6分钟",
+  "youtube_url": "https://www.youtube.com/watch?v=7X9f_xbLWUE",
+  "duration": "9分43秒",
+  "summary": "2026年5月11日TanStack遭遇教科书级供应链攻击：攻击者在11分钟内发布84个恶意包（合法SLSA Build Level 3签名），影响Mistral AI/Guardrails AI等知名项目，累计下载5亿次。攻击手段不是盗令牌或零日漏洞，而是把GitHub Actions三项「无害」特性（pull_request_target触发器+跨信任边界缓存+内存中OIDC令牌）巧妙串联——击穿了npm的整个防御体系。更恐怖的是死人开关：撤销被盗令牌→rm -rf ~/删除主目录。",
+  "key_points": [
+    "攻击三步链：伪造Pull Request→触发pull_request_target(在目标仓库权限运行)→读写跨PR共享的缓存→缓存中嵌入恶意代码+内存OIDC令牌签名→npm信任SLSA L3的发布→84个带签名的恶意包发布成功",
+    "SLSA信任被武器化：最安全的供应链保障变成了攻击的通行证——不是因为SLSA坏了，而是SLSA信任了被污染的工件",
+    "死人开关=前所未有的恶毒：撤销npm令牌→触发脚本→rm -rf ~/=删除开发者整个主目录→连撤销都不能安全撤销",
+    "5亿下载量说明供应链攻击的传播速度远超人工审查速度——恶意包存活11分钟但扩散了5亿次",
+    "三个无害特性的串联=AI时代安全危机的典型模式：不是大漏洞→是小特性的组合效应→人类很难预见"
+  ],
+  "categories": ["AI安全与伦理", "AI编程工具与框架"],
+  "tags": ["供应链攻击", "TanStack", "SLSA", "npm", "GitHub Actions", "死人开关", "安全"],
+  "deep_research": {
+    "original_sources": [],
+    "technical_details": "攻击矩阵：pull_request_target → 在repo上下文运行(有写权限) → 缓存共享 → 恶意PR写入缓存 → 后续PR读取缓存 → 恶意代码进入build流水线 → OIDC令牌在内存中 → 攻击者读取→签名恶意包 → npm信任SLSA Level 3签名 → 发布成功。死人开关原理：npm token被撤销 → CI脚本检测到撤销事件 → 触发恶意响应的hooks → rm -rf ~/。信任链断裂点：SLSA验证签名正确但未验证签名内容的来源→签名了被污染的工件。",
+    "related_work": "与Grok Build数据上传的对比：Grok Build是代码泄露(隐私)，TanStack攻击是代码注入(安全)。两者都暴露了AI工具生态的安全短板。与Fable 5出口管制的对比：美国担心AI模型被「越狱」，但对npm供应链攻击的防御如此脆弱——安全焦点的错位。"
+  },
+  "resources": [],
+  "takeaways": "TanStack攻击是AI时代安全问题的预告片：不是大漏洞→是小特性的串联效应→人类很难预见组合效应→攻击者可以。供应链安全的悖论：SLSA让安全更标准化→标准化让攻击者更容易找到突破口→防护和攻击都在标准化→攻击者的优势是「只需要找到一个弱点」，防护者的劣势是「需要覆盖所有组合」。"
+}

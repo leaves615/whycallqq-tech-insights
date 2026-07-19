@@ -1,0 +1,27 @@
+{
+  "video_id": "5FyRMhLrVUk",
+  "title": "准确率98.7%！这个开源项目如何用推理式检索重新定义RAG",
+  "youtube_url": "https://www.youtube.com/watch?v=5FyRMhLrVUk",
+  "duration": "12分2秒",
+  "summary": "PageIndex（GitHub 3万Star）挑战传统RAG路径：不是把文档打碎(chunk)→embedding→向量数据库→相似度召回，而是把长文档组织成「智能目录」树状结构→让大模型基于结构做推理式检索。基于PageIndex的Mafin 2.5在FinanceBench上达98.7%准确率。核心发现：在长篇专业文档里，结构和推理才是答案精准的关键，而非相似度。这代表了从「检索碎片」到「结构化知识」的根本范式转移。",
+  "key_points": [
+    "传统RAG三个致命局限：①chunk切分破坏文档逻辑结构 ②embedding相似度≠语义相关性(看起来像但其实不相关的信息) ③flat检索→缺乏层级结构→大范围文档上无法定位",
+    "PageIndex核心：把长文档转为树索引(类似图书目录)→每一层节点是内容摘要→检索从根节点逐层向下→在结构中定位→而非在向量空间中找最近邻居",
+    "98.7%准确率(Mafin 2.5 FinanceBench)的实现原理：金融文档有强结构(章节/条款/定义)→树索引天然匹配→逐层推理→定位精准",
+    "推理式检索vs相似度检索的根本区别：推理=逐层排除→缩小搜索范围→最终命中；相似度=找到最类似的一堆→在其中猜测→可能精准也大概率不精准",
+    "范式转移：从「把知识切成碎片再模糊召回」到「保持知识结构再精确导航」——AI检索最终走向结构化管理"
+  ],
+  "categories": ["AI模型深度评测", "论文与技术深度拆解"],
+  "tags": ["PageIndex", "RAG", "推理式检索", "树索引", "向量数据库", "FinanceBench", "结构化知识"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "PageIndex GitHub", "url": "https://github.com/pageindex", "description": "3万Star的开源推理式检索项目"}
+    ],
+    "technical_details": "PageIndex索引构建：文档→自动段落分组→生成每个段落的摘要→构建层级树（根节点=文档主题，子节点=章节摘要，叶子节点=段落本身）。查询流程：问题→从根节点开始→LLM判断答案更可能在哪个子节点→逐层下行→到达叶子→返回内容。与传统RAG对比：RAG=检索k个最相似的chunk→LLM从中找答案(横向搜索)，PageIndex=逐层下降定位到唯一相关段落(纵向搜索)→信息集中度更高。",
+    "related_work": "与Headroom(上下文过滤)的互补：PageIndex减少需要检索的范围→Headroom减少检索到的内容中的冗余→两者叠加=更精准+更有用。与Codegraph/Codebase-Memory对比：他们都是「结构化知识」思路的不同应用领域。"
+  },
+  "resources": [
+    {"title": "PageIndex GitHub", "url": "https://github.com/pageindex", "type": "code"}
+  ],
+  "takeaways": "PageIndex的可迁移性：任何有清晰结构的长文档（法律/金融/合同/医学/政策）都可以用PageIndex→树索引→AI检索→98%+准确率。不是所有RAG都需要这个方案（简单FAQ用传统RAG就行），但对于专业文档的AI应用，从「检索碎片」转向「结构化知识」是必经之路。"
+}
