@@ -1,0 +1,23 @@
+{
+  "video_id": "0HkjxHHxW5M",
+  "title": "OpenAI和Anthropic都在疯抢FDE！程序员转型的最后红利",
+  "youtube_url": "https://www.youtube.com/watch?v=0HkjxHHxW5M",
+  "duration": "11分37秒",
+  "summary": "硅谷最火热的AI职位FDE（前方部署工程师）正在被Anthropic和OpenAI疯抢。核心逻辑：「智能本身正在被商品化」——模型能力趋同后，真正的竞争优势变成「如何把AI嵌入到具体公司业务流中」。Palantir首创的FDE模式（审计→评估→部署）揭示了AI时代的职业新方向：不是站模型旁边鼓掌的人，是能把模型带进业务现场并变成系统能力的人。",
+  "key_points": [
+    "FDE = 把AI嵌入业务的工程角色：不是训练模型，不是写API，是理解客户业务→设计AI嵌入方案→部署和迭代",
+    "智能商品化趋势：OpenAI/Anthropic/Google的模型能力趋同→差异化不再是「谁的模型更强」而是「谁更懂客户的业务流」",
+    "Palantir首创的三阶段FDE模式：Audit(审计现有流程)→Evals(评估AI可行替代点)→Deployment(部署+持续优化)",
+    "3种转型途径：软件工程师→FDE(已有工程能力+需补业务理解)、产品经理→FDE(已有业务理解+需补工程)、顾问→FDE(已有分析框架+需补AI实操)",
+    "「30天FDE面试作品集路线图」：选一个真实公司→审计其业务流程→用AI构建原型→写方案文档→公开"
+  ],
+  "categories": ["程序员职业发展", "AI行业战略与趋势"],
+  "tags": ["FDE", "Palantir", "前方部署工程师", "Anthropic", "OpenAI", "职业转型", "业务嵌入"],
+  "deep_research": {
+    "original_sources": [],
+    "technical_details": "FDE与普通AI工程师的核心区别：工程师关注模型→API→性能。FDE关注客户→业务流程→AI嵌入点→ROI。评估能力 > 编码能力。典型FDE项目流程：①到客户现场观察工作流1-2天 ②识别3-5个AI可替代/增强的环节 ③每个环节量化ROI(时间节省+成本+质量提升) ④构建MVP ⑤部署+收集反馈→迭代。核心能力：不是「调模型」而是「把问题映射到AI可解空间」。",
+    "related_work": "与BCG报告的呼应：66%公司买了AI但不知道省下的时间怎么用→FDE就是解决这个问题的人。与黄仁勋的Token薪酬模型的呼应：FDE=让工程师的AI Token预算真正产生ROI的角色。"
+  },
+  "resources": [],
+  "takeaways": "FDE是AI时代最「非AI」的AI岗位——核心不是模型能力而是业务理解力。智能商品化意味着：未来5年模型本身的差异化将越来越小→「谁能把AI放进真实业务流程」成为唯一差异化的来源。转型窗口：趁现在这个角色还未标准化→先行者红利巨大。"
+}

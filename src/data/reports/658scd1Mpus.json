@@ -1,0 +1,27 @@
+{
+  "video_id": "658scd1Mpus",
+  "title": "为什么我的Skill触发率这么低？Anthropic官方分析：90%的人都忽视了这个细节",
+  "youtube_url": "https://www.youtube.com/watch?v=658scd1Mpus",
+  "duration": "13分14秒",
+  "summary": "Anthropic官方发布《The Complete Guide to Building Skills for Claude》系统拆解Skill本质——不是「高级提示词」而是「工作流产品」。90%人忽视的关键：Skill不是让Agent多记东西，而是教会它稳定地做事。四个关键设计点：触发条件的精确性（什么时候激活Skill）、输入/输出Schema（数据怎么流入流出）、错误处理（Skill失败时的恢复路径）、可组合性（多个Skill如何配合）。",
+  "key_points": [
+    "Skill的核心误解纠正：Skill不是「给Agent更多知识」而是「给Agent标准作业流程（SOP）」——让AI按固定流程做事而非每次重新决策",
+    "90%触发率低的根因：触发条件写得模糊→Agent不确定何时激活→用「自然语言匹配」而非「结构化条件」定义触发",
+    "四个关键设计：①触发条件精确化（用关键词+上下文+任务类型三元组）②输入输出Schema（数据格式统一→Skill间可传递）③错误处理的fallback路径④可组合性",
+    "Skill vs Prompt的核心差异：Skill = 可复用的工作流产品，Prompt = 一次性指令——Skill有明确定义的输入输出+触发+错误处理",
+    "AGENTS.md在Skill体系中是「持久化触发注册表」——不是所有指令都是Skill，只有具备完整四要素的才是"
+  ],
+  "categories": ["AI编程工具与框架"],
+  "tags": ["Skill设计", "Claude Code", "Anthropic", "触发率", "SOP", "工作流产品", "AGENTS.md"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Anthropic Building Skills完整指南", "url": "https://docs.anthropic.com/en/docs/claude-code/skills", "description": "Anthropic官方Skill设计完整指南"}
+    ],
+    "technical_details": "Skill四要素：①触发(Trigger): 关键词匹配+任务类型判断+上下文相关性 ②输入(Input): 接受的参数格式 ③输出(Output): 返回的结果格式 ④错误处理(Error): 失败时怎么办。触发率诊断：检查Agent日志→看Skill在相关场景是否被考虑→如果没被考虑→触发定义太模糊→修改触发条件→测试→迭代。常见触发错误：写「当用户需要」而不是「当用户输入中包含X关键词且当前文件类型为Y」。",
+    "related_work": "Matt Pocock Skills v1.1的呼应：他也是把SOP编码为Skill。与Loop Engineering的关联：好的Skill=Loop的构件块→把Skill组装成Loop=Agentic Engineering的核心技能。"
+  },
+  "resources": [
+    {"title": "Anthropic Skill指南", "url": "https://docs.anthropic.com/en/docs/claude-code/skills", "type": "doc"}
+  ],
+  "takeaways": "Skill不是高级Prompt——它是「AI时代的API」：一个Skill就是一个可以被AI调用的标准化工作流模块。90%人把Skill当成「更好的提示词」而不是「可复用的产品模块」→导致触发率低。转变思维：把Skill当成你写给AI的「小型程序」→有输入、输出、触发条件、异常处理→和写代码一样严谨。"
+}

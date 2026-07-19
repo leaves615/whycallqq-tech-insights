@@ -1,0 +1,29 @@
+{
+  "video_id": "OlwAD9xGFpA",
+  "title": "AI Agent 记忆系统大拆解：Mem0 的极简路线 vs EverMemOS 的生命周期路线",
+  "youtube_url": "https://www.youtube.com/watch?v=OlwAD9xGFpA",
+  "duration": "10分43秒",
+  "summary": "给Agent接向量数据库不等于它就有长期记忆了。2026年记忆系统出现两条截然不同的路线：Mem0的极简路线（single-pass ADD-only提取→多信号检索→极致工程效率），EverMemOS的生命周期路线（记忆要经历形成→巩固→重建→Foresight validity interval时间约束）。记忆不只是「存事实」而是「管理记忆的生命周期」——什么时候该记住、什么时候该忘记、什么时候该泛化。",
+  "key_points": [
+    "Mem0极简路线：ADD-only extraction（只添加不修改）+多信号检索(semantic+BM25+entity匹配)→低Token成本+高工程效率",
+    "EverMemOS生命周期路线：Memory Formation(形成)→Consolidation(巩固)→Recall(回忆)→Foresight validity(时效判断)",
+    "两条路线的本质分歧：Mem0追求「记住更多更准」，EverMemOS追求「管理记忆的生命周期」——该忘的就得忘",
+    "「Foresight validity interval」是Agent记忆最被低估的特性：给每条记忆标注有效期→过期自动降权或删除→防止Agent依赖过时信息做决策",
+    "Agent记忆系统成熟度的判断标准：不是储存量而是记忆的「时效性管理」能力"
+  ],
+  "categories": ["Agent与多Agent架构", "AI模型深度评测"],
+  "tags": ["Agent记忆", "Mem0", "EverMemOS", "向量数据库", "记忆生命周期", "ADD-only", "时效管理"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Mem0 2026算法更新", "url": "https://mem0.ai", "description": "single-pass ADD-only extraction新算法"},
+      {"name": "EverMemOS论文", "url": "https://arxiv.org", "description": "EverMind+Shanda Group的记忆生命周期架构"}
+    ],
+    "technical_details": "Mem0架构：输入→single-pass提取事实→存储→检索(三信号融合: semantic相似度+BM25关键词+entity匹配)→返回上下文。优势：极简路线→Token成本低→工程接入简单。局限：没有「该不该记住」的判断→噪音太多会影响检索质量。EverMemOS架构：输入→形成阶段→巩固阶段(睡眠/离线处理)→回忆阶段→时效判断→返回。优势：管理生命周期→减少噪音积累→时效性管理。局限：工程复杂度高→离线处理步骤需额外算力。Foresight validity interval=给记忆加上「保质期」",
+    "related_work": "与Codebase-Memory-MCP对比：Codebase-Memory是代码库知识图谱（静态），Agent记忆是人机交互记忆（动态）。两者互补——代码库知识不需要忘记，但对话记忆需要。（如用户说「暂时用方案A」→3天后方案A可能过时→需要忘记）。"
+  },
+  "resources": [
+    {"title": "Mem0官网", "url": "https://mem0.ai", "type": "tool"},
+    {"title": "EverMemOS论文", "url": "https://arxiv.org", "type": "paper"}
+  ],
+  "takeaways": "Agent记忆系统的成熟标志不是「能记住多少」，而是能做到三件事：①记住该记的→不丢关键信息 ②忘记该忘的→不让过时信息污染决策 ③知道什么不知道→不瞎编。Mem0解决了①，EverMemOS正在尝试解决①②③。当前最佳实践：不依赖单一记忆系统→代码库用知识图谱方案(如Codebase-Memory-MCP)→对话用Mem0→长期用EverMemOS理念监控。"
+}

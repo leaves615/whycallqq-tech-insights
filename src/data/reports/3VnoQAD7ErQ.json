@@ -1,0 +1,30 @@
+{
+  "video_id": "3VnoQAD7ErQ",
+  "title": "硬核拆解：Midjourney Medical Scanner 是医学影像革命还是硅谷新骗局？",
+  "youtube_url": "https://www.youtube.com/watch?v=3VnoQAD7ErQ",
+  "duration": "14分20秒",
+  "summary": "AI绘画巨头Midjourney突然宣布做医疗——50万个传感器环的Ultrasonic CT，宣称60秒全身扫描、精度达MRI的1/10毫米。但工程师视角的硬核拆解揭示：全身扫描是营销谎言（实际只能逐切片扫描），每月10亿次扫描产生1ZB数据在工程上近乎荒谬，自认「几乎没用AI」且无FDA认证。更危险的是即时全身扫描可能引发「偶发瘤」过度诊断灾难。这是硅谷从AI绘画到医疗的跨界豪赌——红与黑。",
+  "key_points": [
+    "50万个传感器环×超声波断层扫描：技术原理真实(Caltech成果+Butterfly芯片)但「60秒全身扫描」是营销夸张——实际是逐切片扫描，覆盖全身需更长时间",
+    "自认「几乎没用AI」：Midjourney创始人承认扫描仪核心技术不是AI→这是硬件创新而非AI创新",
+    "1ZB数据/月工程上离奇：每月10亿次全身扫描产生1ZB→全球数据中心总量才约10ZB→存储成本不合理",
+    "无FDA认证：宣称2027年开Spa但无任何医疗器械审批→「Spa式医疗」规避监管",
+    "偶发瘤过度诊断是最大风险：全身扫描发现无害异常→不必要的活检和焦虑→医疗成本暴增"
+  ],
+  "categories": ["AI行业战略与趋势"],
+  "tags": ["Midjourney", "医疗扫描仪", "超声波CT", "全身扫描", "硅谷骗局", "过度诊断", "FDA"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "TNW报道", "url": "https://thenextweb.com/news/midjourney-scanner-midjourney-medical-ultrasound", "description": "Midjourney扫描仪分析：大承诺、零业绩记录、无FDA认证"},
+      {"name": "Engadget报道", "url": "https://www.engadget.com/2196998/midjourney-full-body-ultrasonic-scanner", "description": "Midjourney全身超声扫描仪的技术细节和Spa商业模式"},
+      {"name": "Radiology Business", "url": "https://radiologybusiness.com/topics/healthcare-management/healthcare-economics/ai-lab-midjourney-investing-over-74m-launch-whole-body-ultrasound-screening-business", "description": "Midjourney投资7400万美元和全球部署计划"}
+    ],
+    "technical_details": "技术底座真实性：Caltech超声断层扫描+Butterfly超声芯片做传感器阵列→50万个传感器环形排列→每个传感器发射+接收超声波→算法重建3D图像。核心技术不是AI是信号处理和断层重建。营销vs工程：60秒是理论单切片时间→全身看更多切片=实际时间远超60秒。商业模式：Spa而非诊所→规避FDA医疗器械监管→「身体Spa」不是「医疗诊断」→法律灰色地带。1ZB/月数据量合理性验证：一次全身扫描≈100MB重建数据×10亿次=100PB→不是1ZB。",
+    "related_work": "硅谷跨界豪赌模式：AI公司(无医疗经验)+震撼营销(60秒全身扫描)+规避监管(Spa而非诊所)+技术前沿包装(50万传感器)=高风险策略。对比医疗AI真正有价值的方向：Butterfly(便携超声)+AI辅助读片(辅助医生而非替代)。"
+  },
+  "resources": [
+    {"title": "TNW扫描仪分析", "url": "https://thenextweb.com/news/midjourney-scanner-midjourney-medical-ultrasound", "type": "analysis"},
+    {"title": "Engadget技术报道", "url": "https://www.engadget.com/2196998/midjourney-full-body-ultrasonic-scanner", "type": "news"}
+  ],
+  "takeaways": "Midjourney医疗扫描仪是硅谷叙事模式的完美展品：用一个真实技术做底座→包上震撼营销→绕过监管→讲一个改变世界的故事。教训：当AI公司跨界到你不懂的领域时，用第一性原理质疑——60秒全身扫描的物理可能吗？10亿次/月的商业逻辑成立吗？FDA认证在哪？如果不清楚答案→先怀疑。"
+}
