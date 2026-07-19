@@ -1,0 +1,28 @@
+{
+  "video_id": "P2MAa3jpmZw",
+  "title": "Fable 5光速攻破：直接被禁",
+  "youtube_url": "https://www.youtube.com/watch?v=P2MAa3jpmZw",
+  "duration": "10分15秒",
+  "summary": "Claude Fable 5发布仅数日即被美国政府以「潜在越狱」为由实施出口管制全球禁用。触发原因竟是三个词「fix this code」。Anthropic公开反驳称这是狭窄的非通用越狱，百余位安全专家联名要求撤销。19天后解禁，但新安全分类器导致更多常规编程请求被误拦截。事件揭示了AI能力已成为被管制的战略资源。",
+  "key_points": [
+    "「fix this code」三词触发国家级出口管制——安全研究者发现模型能无损修复代码漏洞",
+    "Katie Moussouris（唯一读过调查报告的外部专家）断言「这不是越狱」——政府反应过度",
+    "百余安全专家联名要求撤销禁令，19天后恢复但新分类器导致开发者体验显著倒退",
+    "事件本质：出口管制武器化——AI能力本身成为地缘政治管控对象",
+    "深远影响：开源模型战略价值被空前放大——只有本地可运行的模型才不受政令影响"
+  ],
+  "categories": ["AI模型深度评测", "AI安全与伦理"],
+  "tags": ["Fable 5", "出口管制", "越狱", "Anthropic", "AI安全", "fix this code"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Anthropic官方声明", "url": "https://www.anthropic.com/news/fable-mythos-access", "description": "Fable 5禁令及恢复服务官方回应"},
+      {"name": "TechRadar报道", "url": "https://www.techradar.com/ai-platforms-assistants/claude/after-a-potential-jailbreak-anthropic-is-shutting-off-access-to-its-mythos-5-and-fable-5-models", "description": "越狱细节和禁令影响分析"}
+    ],
+    "technical_details": "禁令时间线：6月11日Fable 5发布→数日内触发出口管制→6月30日商务部解除→7月1日全球恢复。核心矛盾：美国政府的出口管制工具被用于阻止一个API模型服务。恢复后的Fable 5内置更强安全分类器，但副作用显著——更多常规编程请求被误拦截。",
+    "related_work": "对比：Grok Build整库上传事件（安全问题）、Inkling开源策略（绕过出口管制）、阿里禁用Anthropic（合规风险）。三者指向同一趋势：AI工具的可用性越来越受政治与合规因素影响。"
+  },
+  "resources": [
+    {"title": "Anthropic官方声明", "url": "https://www.anthropic.com/news/fable-mythos-access", "type": "official"}
+  ],
+  "takeaways": "Fable 5事件标志着AI能力成为战略管控对象。对开发者：API依赖的脆弱性暴露无遗。对行业：开源模型（Inkling路线）的战略价值因此被放大——只有本地可运行的模型才是真正「属于你」的。"
+}

@@ -1,0 +1,30 @@
+{
+  "video_id": "Jk294GotesM",
+  "title": "Claude Fable 5 也翻车？ALE 1490个真实项目，97%的AI全挂科",
+  "youtube_url": "https://www.youtube.com/watch?v=Jk294GotesM",
+  "duration": "9分21秒",
+  "summary": "ALE-Bench基于真实AtCoder算法竞赛的1490个优化问题评测。结果残酷：包括Fable 5、GPT-5、Grok 4在内的顶级AI在绝大多数项目上失败。AI擅长「一次性生成」但极度不擅长「迭代优化」。RLI(Remote Labor Index)表明AI距离替代远程自由职业者还有巨大差距。",
+  "key_points": [
+    "ALE-Bench 1490个真实NP-hard/无已知精确解的优化问题：顶级AI 97%无法达标",
+    "关键发现：AI擅长「一次性生成代码」但缺乏「持续迭代搜索优化空间」的能力",
+    "Self-refine x1策略（15次采样取中位数）仍无法追平人类专家",
+    "与SWE-bench的对比：可明确判对错的任务AI已接近人类，但需要探索优化空间的任务AI远未达标",
+    "当前LLM架构的系统性短板——本质是「单次生成引擎」而非「持续搜索优化引擎」"
+  ],
+  "categories": ["AI模型深度评测", "论文与技术深度拆解"],
+  "tags": ["ALE-Bench", "Fable 5", "AI局限", "迭代优化", "RLI", "Sakana AI", "算法竞赛"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "ALE-Bench排行榜", "url": "https://sakanaai.github.io/ALE-Bench-Leaderboard", "description": "Sakana AI维护的ALE-Bench实时排行榜"},
+      {"name": "ALE-Bench arXiv论文", "url": "https://arxiv.org/abs/2506.09050", "description": "ALE-Bench评测基准论文（已引28次）"},
+      {"name": "ZDNET RLI报道", "url": "https://www.zdnet.com/article/ai-failed-test-on-remote-freelance-jobs", "description": "AI在远程自由职业任务中97%失败率"}
+    ],
+    "technical_details": "ALE-Bench设计：基于AtCoder Heuristic Contest真实竞赛题目，路由优化/调度等NP-hard问题。评分用连续得分而非二值通过/不通过。测试对象包括Manus/Grok 4/Sonnet 4.5/GPT-5/Gemini 2.5 Pro。自优化策略15次采样取中位数仍效果有限。AI系统性弱点：初始方案思路正确但实现粗糙，缺乏对目标函数的持续感知，不能从中间结果学习调整策略。",
+    "related_work": "SWE-bench（确定性问题）：AI已接近人类。ALE-Bench（搜索优化问题）：AI远未达标。揭示AI能力的锯齿状分布——某些维度极强（代码生成），某些维度极弱（持续优化搜索）。给AI配备迭代优化框架比追求更大模型更关键。"
+  },
+  "resources": [
+    {"title": "ALE-Bench排行榜", "url": "https://sakanaai.github.io/ALE-Bench-Leaderboard", "type": "benchmark"},
+    {"title": "ALE-Bench论文", "url": "https://arxiv.org/abs/2506.09050", "type": "paper"}
+  ],
+  "takeaways": "当前最强AI在需要持续迭代优化的真实项目上表现与初级实习生相当。这不是模型不够大的问题，而是架构层面的系统性短板：LLM是「单次生成引擎」不是「持续搜索引擎」。给AI配备迭代优化框架（感知中间结果→调整策略→再试）比追求更大模型更关键。"
+}

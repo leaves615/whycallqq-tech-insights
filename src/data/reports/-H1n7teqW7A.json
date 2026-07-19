@@ -1,0 +1,29 @@
+{
+  "video_id": "-H1n7teqW7A",
+  "title": "Karpathy发现的AI编程三大陷阱",
+  "youtube_url": "https://www.youtube.com/watch?v=-H1n7teqW7A",
+  "duration": "10分36秒",
+  "summary": "Andrej Karpathy在2025年提出「Vibe Coding」概念引发轰动——完全凭感觉让AI写代码。但到2026年2月他公开宣布Vibe Coding已过时，转向「Agentic Engineering」。他指出AI编程三大致命陷阱：黑盒陷阱（零调试能力）、失忆陷阱（跨session无记忆导致不一致）、锯齿智能陷阱（相同任务在不同模型/不同时刻表现迥异）。YC W25有25%的初创公司95%代码是AI生成的，但AI合著代码含1.7倍更多严重缺陷。",
+  "key_points": [
+    "三大陷阱：黑盒陷阱（不懂AI生成代码的原理→出问题无法调试）、失忆陷阱（AI无跨session记忆→前后不一致）、锯齿智能陷阱（能力不连续→学会A不代表会B）",
+    "Vibe Coding已死→Agentic Engineering崛起：不再是「一个人对AI说话」而是「一个人指挥AI舰队」",
+    "YC W25数据：25%初创公司95%代码AI生成，但AI合著代码1.7倍更多严重缺陷",
+    "上下文工程（Context Engineering）成为新核心能力——不是写好prompt而是填对context窗口",
+    "Karpathy的核心转变：从「打字员」变成「架构师+审查员」——开发者不再写代码，而是审查AI代码"
+  ],
+  "categories": ["AI编程工具与框架", "程序员职业发展"],
+  "tags": ["Karpathy", "Vibe Coding", "Agentic Engineering", "context engineering", "AI编程陷阱"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Karpathy Vibe Coding宣言", "url": "https://x.com/karpathy", "description": "Karpathy最初提出Vibe Coding概念的X帖子"},
+      {"name": "Foundra分析-Agentic Engineering转折", "url": "https://www.foundra.ai/key-reads/vibe-coding-over-karpathy-agentic-engineering-first-time-founders-may-2026", "description": "Karpathy从Vibe Coding转向Agentic Engineering的分析"},
+      {"name": "PureAI Context Engineering解读", "url": "https://pureai.com/articles/2025/09/23/karpathy-puts-context-at-the-core-of-ai-coding.aspx", "description": "Karpathy上下文工程理念深度解读"}
+    ],
+    "technical_details": "Software 1.0(传统人类代码)→2.0(神经网络)→3.0(自然语言编程)是Karpathy的核心框架。三大陷阱本质：LLM的超级记忆（训练数据）和顺行性遗忘（无跨session记忆）的矛盾。Context Engineering: 不是写好prompt而是精确选择哪些信息进入有限的context窗口——这是AI编程的新核心技能。",
+    "related_work": "Vibe Coding→Agentic Engineering的转变与Claude Code Loop Engineering、Matt Pocock Skills v1.1、OpenSpec SDD 三种方法论高度一致——都是在从「靠运气」走向「靠系统」。"
+  },
+  "resources": [
+    {"title": "Karpathy X账号", "url": "https://x.com/karpathy", "type": "social"}
+  ],
+  "takeaways": "Karpathy的转变揭示了AI编程的成熟过程：第一阶段是兴奋（Vibe Coding→AI能写代码了！），第二阶段是清醒（三大陷阱→AI写的大量代码有严重缺陷），第三阶段是系统化（Agentic Engineering→用系统而非直觉驾驭AI）。核心：AI编程的瓶颈不是模型能力，而是人类的工作流设计。"
+}

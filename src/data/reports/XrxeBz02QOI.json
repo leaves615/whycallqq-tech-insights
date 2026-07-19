@@ -1,0 +1,30 @@
+{
+  "video_id": "XrxeBz02QOI",
+  "title": "AI自己写代码53小时？深度拆解Codex /goal的底层逻辑",
+  "youtube_url": "https://www.youtube.com/watch?v=XrxeBz02QOI",
+  "duration": "11分18秒",
+  "summary": "OpenAI Codex v0.128.0引入/goal命令——一个持久化目标工作流，让AI能规划、编码、测试、迭代直到目标达成。核心突破是「持久化」：目标状态在终端重启、笔记本休眠和多小时暂停后仍然存活。实测案例：一个/goal任务持续6小时，中间有5小时暂停（关闭笔记本睡觉），醒来后Codex自动继续。从prompt-response到long-horizon autonomous coding的范式跃迁。",
+  "key_points": [
+    "/goal=Codex CLI的Ralph Loop实现——比普通prompt多了持久化目标、自动继续、token预算控制",
+    "持久化是核心突破：目标状态存活于终端重启和5小时暂停→真正的「睡觉时帮你工作」",
+    "4个生命周期状态：create→running(可pause)→resume→complete/clear",
+    "Token预算设计防无限循环：可设置budget_limit防止彻夜烧token",
+    "适用vs不适用：需要多步探索的长周期任务（重构、特性开发）适用，简单单次编辑不适用"
+  ],
+  "categories": ["AI编程工具与框架", "Agent与多Agent架构"],
+  "tags": ["Codex", "/goal", "OpenAI", "Ralph Loop", "autonomous coding", "持久化", "agentic"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Codex /goal官方文档", "url": "https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex", "description": "OpenAI Codex CLI /goal命令官方使用指南"},
+      {"name": "Ralphable /goal深度指南", "url": "https://ralphable.com/blog/codex-goal-command-ralph-loop-openai-built-in-autonomous-coding-agent-2026", "description": "包含update_goal JSON示例和全部生命周期状态的生产环境指南"},
+      {"name": "Tecton&Tide实战报告", "url": "https://tectontide.com/en/blog/codex-goal-six-hour-run", "description": "6小时/goal任务含5小时暂停的实战记录"}
+    ],
+    "technical_details": "/goal的底层机制：①目标定义(JSON): 目标描述+验收条件+token预算+模型限制 ②持久化: 目标状态写入文件系统→跨重启存活 ③自动继续: 终端重连时Codex自动注入developer message→无需手动重新prompt ④update_goal工具调用: AI可自行更新目标状态 ⑤slash命令: /goal pause/resume/clear。对比Claude Code的Loop: /goal更接近Goal-based Loop但有持久化的独特优势。",
+    "related_work": "Claude Code /loop(4种模式)、Codex /goal(单一目标持久化)、Cursor composer(无持久化)。/goal的独特价值：不是更好而是「更省心」——你不需要守在屏幕前。"
+  },
+  "resources": [
+    {"title": "Codex /goal官方Cookbook", "url": "https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex", "type": "doc"},
+    {"title": "Ralphable /goal生产指南", "url": "https://ralphable.com/blog/codex-goal-command-ralph-loop-openai-built-in-autonomous-coding-agent-2026", "type": "guide"}
+  ],
+  "takeaways": "Codex /goal代表AI编程工具从「对话助手」进化为「自主执行单元」。持久化是最被低估的突破——它让AI工作流从「你和AI同步在线」变成「你布置任务、AI自己完成、你回来检查」。这从根本上改变了工程师和AI的时间关系：工程师的时间被解放到更高层次的决策和审查上。"
+}

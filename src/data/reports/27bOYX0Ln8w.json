@@ -1,0 +1,28 @@
+{
+  "video_id": "27bOYX0Ln8w",
+  "title": "程序员要失业？黄仁勋 GTC 2026：完全扯淡，你们的薪水要翻三倍",
+  "youtube_url": "https://www.youtube.com/watch?v=27bOYX0Ln8w",
+  "duration": "7分48秒",
+  "summary": "GTC 2026上黄仁勋提出一个震惊的观点：程序员不会失业，薪水会翻三倍。他还提出创新薪酬模型——年薪50万美元的工程师应该额外获得25万美元的AI Token预算（相当于半个年薪的AI能力配给），让每个工程师被AI「10倍放大」工作效率。Nvidia未来将雇佣数十万AI Agent，超过现有4.2万人类员工。不是AI替代人，而是不会用AI的人被会用AI的人替代。",
+  "key_points": [
+    "核心论断：程序员不会失业——会用AI的工程师价值10倍放大，不会用的被淘汰",
+    "Token薪酬模型：年薪50万+25万Token预算→工程师+AI的总产出远超单人",
+    "Nvidia将雇佣数十万AI Agent（远超4.2万人类员工）——AI Agent是同事不是替代品",
+    "反直觉逻辑：AI降低编程成本→软件需求暴增→需要更多工程师→薪水上升",
+    "关键转变：工程师从「写代码的人」变成「指挥AI舰队的人」"
+  ],
+  "categories": ["程序员职业发展", "AI行业战略与趋势"],
+  "tags": ["黄仁勋", "GTC 2026", "程序员薪水", "AI Agent", "NVIDIA", "Token预算"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "CNBC GTC 2026报道", "url": "https://www.cnbc.com/2026/03/20/nvidia-ai-agents-tokens-human-workers-engineer-jobs-unemployment-jensen-huang.html", "description": "黄仁勋GTC演讲和Token薪酬模型详细报道"},
+      {"name": "Business Insider报道", "url": "https://www.businessinsider.com/nvidia-ceo-jensen-huang-floats-paying-engineers-bonus-in-tokens-2026-3", "description": "Token招募策略的具体细节"}
+    ],
+    "technical_details": "黄仁勋理论：软件需求弹性极大→AI降低编码成本→软件供应增加→新需求被释放→总工程师需求增加。Token薪酬模型：除了基本工资，每个工程师获得等于年薪一半的Token预算用于部署AI Agent——这是一种全新的「生产力配给」而非「替代」。NVIDIA自身案例：42k人类+500k AI Agent的目标显示AI Agent是扩编不是裁员。",
+    "related_work": "对比BCG调研报告（74%使用AI但66%无时间再分配指引）——黄仁勋的Token预算模型本质上是BCG报告缺失那块的解决方案：给员工具体的使用AI的资源和框架。"
+  },
+  "resources": [
+    {"title": "CNBC黄仁勋GTC报道", "url": "https://www.cnbc.com/2026/03/20/nvidia-ai-agents-tokens-human-workers-engineer-jobs-unemployment-jensen-huang.html", "type": "news"}
+  ],
+  "takeaways": "黄仁勋的「Token预算模型」是一种新颖的人力资本投资理念：AI不是替代工程师的工具，而是放大工程师价值的投入。年薪50万配25万Token（花50万AI支出换取10倍产出）= ROI是正的。最核心的信息：不会用AI的人会被会用AI的人替代——这是「输入替代」而非「任务替代」。"
+}
