@@ -1,0 +1,29 @@
+{
+  "video_id": "FhPQhIXYc-M",
+  "title": "AI搞不定百万行祖传代码？官方教你打造企业级Claude Code编程工作流",
+  "youtube_url": "https://www.youtube.com/watch?v=FhPQhIXYc-M",
+  "duration": "13分8秒",
+  "summary": "Claude官方发布《大型代码库实战指南》解决「小项目神器→大项目智障」问题。核心发现：传统RAG在大型代码库中容易失效（检索不准确→错误上下文→AI行为异常）。Claude Code通过Agentic Search（AI自主搜索而非被动RAG）解决。关键实战：CLAUDE.md分层配置（仓库级→目录级→任务级）、Hooks自动化（git→lint→测试）、Skills按需加载（只在需要时激活、避免污染上下文）。",
+  "key_points": [
+    "RAG在大型代码库中失效的根本原因：关键词检索不能理解代码语义→返回无关文件→污染AI上下文→AI输出错误",
+    "Agentic Search=AI自主搜索：不是给AI一堆文件→AI自己决定需要看什么→主动搜索→动态构建上下文",
+    "CLAUDE.md分层配置：repo根级(全局规则)→目录级(模块规则)→任务级(临时约束)→上下文精准度逐层提升",
+    "Hooks自动化：git commit前自动lint、push前跑测试→让AI生成代码自动进入质量检查流程",
+    "Skills按需加载：不是激活所有Skills→只在需要时加载相关Skills→避免上下文污染→提高AI决策质量"
+  ],
+  "categories": ["AI编程工具与框架"],
+  "tags": ["Claude Code", "大型代码库", "Agentic Search", "RAG失效", "CLAUDE.md", "Hooks", "Skills"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Claude Code大型代码库指南(原文)", "url": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start", "description": "官方大型代码库使用最佳实践"},
+      {"name": "中文译文", "url": "https://blog.lightnote.com.cn/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start/", "description": "中文版译文"}
+    ],
+    "technical_details": "Agentic Search步骤：①AI接到任务→②自行分析需要哪些信息→③自主搜索代码库(而非被动接收RAG结果)→④根据搜索结果构建最佳上下文→⑤执行任务。RAG vs Agentic Search对比：RAG=我给你最相关的结果(被动)，Agentic Search=我决定我需要什么并去找(主动)。分层CLAUDE.md架构=上下文管理策略：不是把所有规则放一个文件，而是根据任务层级动态加载。",
+    "related_work": "与CodeGraph和Codebase-Memory-MCP联动：Agentic Search+知识图谱=最优大型代码库方案→图谱提供鸟瞰地图+Agentic Search做精准检索。与编排税的关联：如果Agentic Search能找到准确上下文→AI错误减少→人类审查成本降低→编排税下降。"
+  },
+  "resources": [
+    {"title": "Claude Code大型代码库指南", "url": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start", "type": "guide"},
+    {"title": "中文译文", "url": "https://blog.lightnote.com.cn/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start/", "type": "article"}
+  ],
+  "takeaways": "AI在大项目和小项目上的表现差距不是因为模型能力不够，而是「上下文管理」能力的差异。小项目整个代码库就是上下文→AI看到一切→表现好。大项目只能看到部分→RAG给错文件→表现差。解决方案的两条路线：Agentic Search(Claude Code官方路线)和知识图谱(CodeGraph/Codebase-Memory-MCP)。两者不冲突——可以同时用。"
+}

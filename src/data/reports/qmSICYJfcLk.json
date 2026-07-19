@@ -1,0 +1,25 @@
+{
+  "video_id": "qmSICYJfcLk",
+  "title": "AI Agent的自我进化：微软SkillOpt如何让冻结模型性能提升23.5%",
+  "youtube_url": "https://www.youtube.com/watch?v=qmSICYJfcLk",
+  "duration": "14分41秒",
+  "summary": "微软研究院SkillOpt革新了AI Agent优化——不微调模型，不手动调提示，而是把Agent的skill.md当作「可训练的外部状态」，用类似深度学习的训练循环优化它。核心创新：文本学习率(限制每步编辑范围)、验证门控(只接受改进)、拒绝缓冲(失败编辑做负反馈)、慢更新机制(长期稳定性)。在6基准×7模型×3模式的全面评估中，52个测试全部获胜。GPT-5.5从77.7%→87.3%(+9.6pp)，平均提升23.5pp。",
+  "key_points": [
+    "第三条路：不微调模型(成本高/不可迁移)不手工调提示(不稳定)→训练skill.md作为可读可审计的Markdown优化对象",
+    "四核心创新：文本学习率(类似optimizer的learning rate→控制每次修改多少文字)、验证门控(只有改进的编辑才被接受→类似梯度下降只接受loss下降的方向)、拒绝缓冲(失败编辑变成负反馈→类似反向传播)、慢更新(防止过快修改导致不稳定)",
+    "52/52全胜=实用性验证：在所有测试场景和模型组合中都优于baseline→证明方法通用性",
+    "性能数据：GPT-5.5 SearchQA 77.7→87.3%, SpreadsheetBench 41.8→80.7%, 平均+23.5pp",
+    "输出是可读Markdown=可审计可共享：优化后的skill.md可发给其他开发者→Agent优化成果可积累"
+  ],
+  "categories": ["Agent与多Agent架构", "AI模型深度评测"],
+  "tags": ["SkillOpt", "微软", "Agent优化", "文本学习率", "验证门控", "skill.md", "冻结模型"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "微软SkillOpt论文", "url": "https://arxiv.org", "description": "文本学习率+验证门控的Agent训练框架"}
+    ],
+    "technical_details": "训练流程：①随机初始化skill.md或从模板开始 ②Agent用当前skill.md执行任务 ③评估性能分数 ④如果分数提高→接受修改并更新skill.md；如果分数降低→拒绝修改→加入拒绝缓冲→作为「不要这样改」的负反馈 ⑤文本学习率控制每步修改的幅度（太快→不稳定，太慢→不收敛）⑥重复直到收敛。52个测试覆盖：SearchQA、SpreadsheetBench等6基准×GPT-5.5/Gemini/Claude等7模型×3执行模式→全部优于baseline。",
+    "related_work": "与Anthropic Skill设计的呼应：SkillOpt把Skill从「手工制品」升级为「可训练的软件资产」。与Matt Pocock Skills的关联：如果SkillOpt用在Pocock的Skills上→自动优化→更稳定。与编排税的关联：优化后的Skill=更高的自动验证覆盖率→编排税降低。"
+  },
+  "resources": [],
+  "takeaways": "SkillOpt的本质：Skill不是一次性提示词而是「可迭代优化的软件模块」。就像代码通过CI→CD持续改进一样，Skill也可以通过训练循环持续优化。未来AI开发者的核心工作之一：设计Skill的训练循环→让Agent自动变强而不是手动调prompt。"
+}

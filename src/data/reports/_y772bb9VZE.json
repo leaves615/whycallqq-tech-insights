@@ -1,0 +1,27 @@
+{
+  "video_id": "_y772bb9VZE",
+  "title": "拒绝Vibe Coding！Matt Pocock 教你用 Skills 回归工程本质",
+  "youtube_url": "https://www.youtube.com/watch?v=_y772bb9VZE",
+  "duration": "12分14秒",
+  "summary": "GitHub 8万多Star的宝藏仓库——Matt Pocock的skills开源项目。在Vibe Coding时代，Matt反其道而行：AI时代软件工程基础比以往任何时候都更重要。他的skills仓库通过/grill-with-docs(让AI先理解代码再动手)、/tdd(强制AI写测试)、/improve-codebase-architecture(持续重构)等机制，给出了一套拒绝盲目的代码生成、回归真实软件工程的方案。为什么AI生成的代码总是跑不通？为什么引入AI后代码库加速变成屎山？答案都在这里。",
+  "key_points": [
+    "/grill-with-docs：AI在新任务前必须先审问代码库→理解上下文→再动手→避免AI在不理解的情况下做破坏性修改",
+    "/tdd(测试驱动AI开发)：让AI先写测试再写代码→测试通过是验收标准而非人类审查→自动验证覆盖率提升",
+    "/improve-codebase-architecture：AI定期审查代码→提出重构方案→防止Vibe Coding造成的架构腐蚀",
+    "Matt Pocock的哲学：AI不是替代软件工程基础，而是放大软件工程基础——基础好的人被放大，基础差的人也被放大",
+    "8万Star说明：开发者对「AI产出质量」而非「AI产出速度」的焦虑在飙升"
+  ],
+  "categories": ["AI编程工具与框架", "前端工程与设计"],
+  "tags": ["Matt Pocock", "skills", "Vibe Coding", "AI编程", "grill-with-docs", "tdd", "软件工程基础"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Matt Pocock Skills GitHub", "url": "https://github.com/mattpocock/skills", "description": "8万+Star的AI Agent Skills开源项目"}
+    ],
+    "technical_details": "Skills v1.x的核心思想：不是给AI更多功能，而是给AI更严格的约束。每一个Skill都是一条「不能越过的红线」——定义AI在特定场景下的行为边界。关键创新：/grill-with-docs反转沟通范式→AI不是被动等指令而是主动审问代码。与普通prompt的本质区别：prompt=临时指令，Skill=持久约束。Skill系统让AI行为「可预测化」——因为约束文件是不变的。",
+    "related_work": "与Anthropic Skill设计指南的呼应：Matt Pocock是对「Skill的具体实现」，Anthropic是对「Skill的设计方法」。与SkillOpt的关联：SkillOpt可以把Matt的Skills自动优化→两个方向正在合流。"
+  },
+  "resources": [
+    {"title": "Matt Pocock Skills GitHub", "url": "https://github.com/mattpocock/skills", "type": "code"}
+  ],
+  "takeaways": "Matt Pocock的Skills项目揭示了一个残酷但正确的逻辑：AI把你的工程能力放大了，而不是替代了。如果你基础好→AI让你的好代码来得更快。如果你基础差→AI让你的差代码泛滥得更快。Skills就是在差的基础上做矫正——给AI行为加上软件工程约束。"
+}

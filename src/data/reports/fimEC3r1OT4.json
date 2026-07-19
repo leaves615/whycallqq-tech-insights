@@ -1,0 +1,25 @@
+{
+  "video_id": "fimEC3r1OT4",
+  "title": "别怪大模型了！Claude Code 降智真正元凶揭秘",
+  "youtube_url": "https://www.youtube.com/watch?v=fimEC3r1OT4",
+  "duration": "12分51秒",
+  "summary": "Claude Code爆发了一场持续47天的「降智」事故——无数开发者怀疑是模型本身变笨了。但Anthropic官方万字复盘揭露真相：底层模型和API完全正常，是三个产品层小改动的连锁反应。Token是怎么被偷走的？为什么连过四道测试防线的Bug还是漏网？「用AI审查AI代码」从理论变成现实——因为这次事故就是AI审查的Bug导致了47天的问题。",
+  "key_points": [
+    "47天降智事故：开发者疯狂报告AI变笨→但根本原因不是模型，是三个产品层改动",
+    "三个产品层改动：缓存策略调整→上下文管理变更→Tool调用顺序优化→三者互动的连锁反应→AI输出质量下降",
+    "「用AI审查AI」是解决方案：传统测试工具无法检测「AI输出质量」这类非确定性质量下降→需要AI评测AI",
+    "四道防线全漏=AI质量检测工具不存在：lint/typecheck/单元测试/集成测试→这些测「正确性」但不测「好不好」",
+    "Token被偷走的机制：缓存策略错误→重复请求→Token浪费→系统降速→开发者以为AI变笨"
+  ],
+  "categories": ["AI编程工具与框架", "AI安全与伦理"],
+  "tags": ["Claude Code", "降智", "47天Bug", "AI审查AI", "缓存策略", "产品改动", "连锁反应"],
+  "deep_research": {
+    "original_sources": [
+      {"name": "Anthropic万字复盘", "url": "https://claude.com/blog", "description": "官方47天降智事故复盘分析"}
+    ],
+    "technical_details": "连锁反应机制：缓存策略调整(减少缓存Token)→上下文管理变更(更激进地裁剪历史)→Tool调用优化(减少Tool调用频次)→三者叠加→AI没有足够的上下文+没有足够的工具调用→输出质量大幅下降。四道防线检测不到「质量下降」因为质量下降是主观的→lint/typecheck/测试都在检测「对错」而不是「好坏」。AI审查AI的方案：用一个Model评测另一个Model的输出质量→生成Quality Score→当Score下降自动告警。",
+    "related_work": "与Addy Osmani代码审查危机的呼应：AI产出多了→AI产出质量检测能力没跟上→质量危机。与编排税的关联：编排税中「验证」的成本在此事故中暴露→自动验证可以防正确性bug但防不住质量下降→需要新型AI评测工具。"
+  },
+  "resources": [],
+  "takeaways": "Claude Code降智事故是AI工具质量保障的「切尔诺贝利时刻」——不是模型出问题，是我们缺少检测「模型输出质量」的工具。传统的正确性测试（测试通过/不通过）对AI质量下降完全无效。未来AI工具的必要组件：AI评测AI→监测输出质量而非正确性→提前预警。"
+}
